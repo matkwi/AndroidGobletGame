@@ -58,6 +58,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CameraMovementScript.cs" />
+     <Compile Include="Assets\CameraRestrictions.cs" />
      <Compile Include="Assets\Dice.cs" />
      <Compile Include="Assets\FollowThePath.cs" />
      <Compile Include="Assets\GameControl.cs" />
@@ -312,6 +314,12 @@
  </Reference>
  <Reference Include="UnityEngine.XRModule">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.4f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+ <HintPath>/Applications/Unity/Hub/Editor/2019.4.4f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.iOS.Extensions.Common">
+ <HintPath>/Applications/Unity/Hub/Editor/2019.4.4f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.4f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

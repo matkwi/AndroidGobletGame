@@ -22,7 +22,7 @@ public class FollowThePath : MonoBehaviour {
         if (moveAllowed)
             Move();
 	}
-
+    
     private void Move()
     {
         if (waypointIndex <= waypoints.Length - 1)
