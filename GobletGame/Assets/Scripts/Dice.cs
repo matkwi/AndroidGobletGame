@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +8,7 @@ public class Dice : MonoBehaviour {
     private SpriteRenderer rend;
     private int whosTurn = 1;
     private bool coroutineAllowed = true;
+    public static bool playerIsMoving = false;
 
 	// Use this for initialization
 	private void Start () {
@@ -19,8 +19,10 @@ public class Dice : MonoBehaviour {
 
     private void OnMouseDown()
     {
-        if (!GameControl.gameOver && coroutineAllowed)
-            StartCoroutine("RollTheDice");
+        if (!playerIsMoving) {
+            if (!GameControl.gameOver && coroutineAllowed)
+                StartCoroutine("RollTheDice");
+        }
     }
 
     private IEnumerator RollTheDice()
@@ -28,10 +30,12 @@ public class Dice : MonoBehaviour {
         coroutineAllowed = false;
         int randomDiceSide = 0;
         for (int i = 0; i <= 20; i++) {
-            randomDiceSide = Random.Range(0, 10);
+            randomDiceSide = Random.Range(1, 10);
             rend.sprite = diceSides[randomDiceSide];
             yield return new WaitForSeconds(0.05f);
         }
+
+        playerIsMoving = true;
 
         GameControl.diceSideThrown = randomDiceSide;
 

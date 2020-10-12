@@ -58,11 +58,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CameraMovementScript.cs" />
-     <Compile Include="Assets\CameraRestrictions.cs" />
-     <Compile Include="Assets\Dice.cs" />
-     <Compile Include="Assets\FollowThePath.cs" />
-     <Compile Include="Assets\GameControl.cs" />
+     <Compile Include="Assets\Scripts\CameraMovementScript.cs" />
+     <Compile Include="Assets\Scripts\CameraRestrictions.cs" />
+     <Compile Include="Assets\Scripts\Dice.cs" />
+     <Compile Include="Assets\Scripts\FollowThePath.cs" />
+     <Compile Include="Assets\Scripts\GameControl.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/matkwi/github/AndroidGobletGame/GobletGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

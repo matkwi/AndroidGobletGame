@@ -50,84 +50,67 @@ public class GameControl : MonoBehaviour {
     {
 
         if (isBatPlaying) {
-            if (Bat.GetComponent<FollowThePath>().waypointIndex > 
-                BatStartWaypoint + diceSideThrown)
-            {
+            if (Bat.GetComponent<FollowThePath>().iterator > diceSideThrown) {
+                Bat.GetComponent<FollowThePath>().iterator = 1;
                 Bat.GetComponent<FollowThePath>().moveAllowed = false;
+                Dice.playerIsMoving = false;
                 //player1MoveText.gameObject.SetActive(false);
                 //player2MoveText.gameObject.SetActive(true);
                 BatStartWaypoint = Bat.GetComponent<FollowThePath>().waypointIndex - 1;
             }
             
+            if (Bat.GetComponent<FollowThePath>().waypointIndex == Bat.GetComponent<FollowThePath>().waypoints.Length) {
+                //whoWinsTextShadow.gameObject.SetActive(true);
+                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
+                gameOver = true;
+            }
         }
         
         if (isBunnyPlaying) {
-            if (Bunny.GetComponent<FollowThePath>().waypointIndex > 
-                BunnyStartWaypoint + diceSideThrown)
-            {
+            if (Bunny.GetComponent<FollowThePath>().iterator > diceSideThrown) {
+                Bunny.GetComponent<FollowThePath>().iterator = 1;
                 Bunny.GetComponent<FollowThePath>().moveAllowed = false;
+                Dice.playerIsMoving = false;
                 //player1MoveText.gameObject.SetActive(false);
                 //player2MoveText.gameObject.SetActive(true);
                 BunnyStartWaypoint = Bunny.GetComponent<FollowThePath>().waypointIndex - 1;
             }
+            
+            if (Bunny.GetComponent<FollowThePath>().waypointIndex == Bunny.GetComponent<FollowThePath>().waypoints.Length) {
+                //whoWinsTextShadow.gameObject.SetActive(true);
+                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
+                gameOver = true;
+            }
         }
         
         if (isDuckPlaying) {
-            if (Duck.GetComponent<FollowThePath>().waypointIndex > 
-                DuckStartWaypoint + diceSideThrown)
-            {
+            if (Duck.GetComponent<FollowThePath>().iterator > diceSideThrown) {
+                Duck.GetComponent<FollowThePath>().iterator = 1;
                 Duck.GetComponent<FollowThePath>().moveAllowed = false;
+                Dice.playerIsMoving = false;
                 //player1MoveText.gameObject.SetActive(false);
                 //player2MoveText.gameObject.SetActive(true);
                 DuckStartWaypoint = Duck.GetComponent<FollowThePath>().waypointIndex - 1;
             }
+            
+            if (Duck.GetComponent<FollowThePath>().waypointIndex == Duck.GetComponent<FollowThePath>().waypoints.Length) {
+                //whoWinsTextShadow.gameObject.SetActive(true);
+                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
+                gameOver = true;
+            }
         }
         
         if (isChickenPlaying) {
-            if (Chicken.GetComponent<FollowThePath>().waypointIndex > 
-                ChickenStartWaypoint + diceSideThrown)
-            {
+            if (Chicken.GetComponent<FollowThePath>().iterator > diceSideThrown) {
+                Chicken.GetComponent<FollowThePath>().iterator = 1;
                 Chicken.GetComponent<FollowThePath>().moveAllowed = false;
+                Dice.playerIsMoving = false;
                 //player1MoveText.gameObject.SetActive(false);
                 //player2MoveText.gameObject.SetActive(true);
                 ChickenStartWaypoint = Chicken.GetComponent<FollowThePath>().waypointIndex - 1;
             }
-        }
-
-        if (isBatPlaying) {
-            if (Bat.GetComponent<FollowThePath>().waypointIndex == 
-                Bat.GetComponent<FollowThePath>().waypoints.Length)
-            {
-                //whoWinsTextShadow.gameObject.SetActive(true);
-                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
-                gameOver = true;
-            }
-        }
-
-        if (isBunnyPlaying) {
-            if (Bunny.GetComponent<FollowThePath>().waypointIndex == 
-                Bunny.GetComponent<FollowThePath>().waypoints.Length)
-            {
-                //whoWinsTextShadow.gameObject.SetActive(true);
-                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
-                gameOver = true;
-            }
-        }
-
-        if (isDuckPlaying) {
-            if (Duck.GetComponent<FollowThePath>().waypointIndex == 
-                Duck.GetComponent<FollowThePath>().waypoints.Length)
-            {
-                //whoWinsTextShadow.gameObject.SetActive(true);
-                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
-                gameOver = true;
-            }
-        }
-
-        if (isChickenPlaying) {
-            if (Chicken.GetComponent<FollowThePath>().waypointIndex == 
-                Chicken.GetComponent<FollowThePath>().waypoints.Length)
-            {
+            
+            if (Chicken.GetComponent<FollowThePath>().waypointIndex == Chicken.GetComponent<FollowThePath>().waypoints.Length) {
                 //whoWinsTextShadow.gameObject.SetActive(true);
                 //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
                 gameOver = true;
