@@ -10,6 +10,7 @@
           <e p="Dice.cs" t="Include" />
           <e p="FollowThePath.cs" t="Include" />
           <e p="GameControl.cs" t="Include" />
+          <e p="HealthBar.cs" t="Include" />
         </e>
       </e>
       <e p="GobletGame.sln" t="IncludeFlat" />

@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Dice.cs" />
      <Compile Include="Assets\Scripts\FollowThePath.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
+     <Compile Include="Assets\Scripts\HealthBar.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/matkwi/github/AndroidGobletGame/GobletGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>

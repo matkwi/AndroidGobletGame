@@ -20,9 +20,16 @@ public class FollowThePath : MonoBehaviour {
 
     private string arrowDirection;
 
+    public int maxHealth = 10;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
 	// Use this for initialization
 	private void Start () {
         transform.position = waypoints[waypointIndex].transform.position;
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 	
 	// Update is called once per frame
@@ -32,8 +39,17 @@ public class FollowThePath : MonoBehaviour {
         }   
         if (moveAllowed)
             Move();
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            TakeDamage(2);
+        }
 	}
-    
+
+    void TakeDamage(int damage) {
+        currentHealth -= damage;
+        
+        healthBar.SetHealth(currentHealth);
+    }
+
     private void CastRay() {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit2D hit = Physics2D.Raycast (ray.origin, ray.direction, Mathf.Infinity);
