@@ -6,7 +6,7 @@ public class Dice : MonoBehaviour {
 
     private Sprite[] diceSides;
     private SpriteRenderer rend;
-    private int whosTurn = 1;
+    public int whosTurn = 1;
     private bool coroutineAllowed = true;
     public static bool playerIsMoving = false;
 
@@ -68,7 +68,11 @@ public class Dice : MonoBehaviour {
         }
         
         whosTurn += 1;
-        if (whosTurn == 5) whosTurn = 1;
+        if (whosTurn == 5 || whosTurn == 6) whosTurn = 1;
         coroutineAllowed = true;
+    }
+
+    public int getWhosTurn() {
+        return whosTurn;
     }
 }
