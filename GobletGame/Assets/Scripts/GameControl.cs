@@ -5,14 +5,10 @@ public class GameControl : MonoBehaviour {
 
     //private static GameObject whoWinsTextShadow, player1MoveText, player2MoveText;
 
-    public static GameObject Bat, Bunny, Duck, Chicken;
+    public static Player Bat, Bunny, Duck, Chicken;
     public static bool isBatPlaying = true, isBunnyPlaying = true, isDuckPlaying = true, isChickenPlaying = true;
-
+    
     public static int diceSideThrown = 10;
-    public static int BatStartWaypoint = 0;
-    public static int BunnyStartWaypoint = 0;
-    public static int DuckStartWaypoint = 0;
-    public static int ChickenStartWaypoint = 0;
 
     public static bool gameOver = false;
 
@@ -23,37 +19,37 @@ public class GameControl : MonoBehaviour {
         //player1MoveText = GameObject.Find("Player1MoveText");
         //player2MoveText = GameObject.Find("Player2MoveText");
 
-        if (isBatPlaying) Bat = GameObject.Find("Bat");
+        if (isBatPlaying) Bat = GameObject.Find("Bat").GetComponent<Player>();
         else Destroy(GameObject.Find("Bat"));
         
-        if (isBunnyPlaying) Bunny = GameObject.Find("Bunny");
+        if (isBunnyPlaying) Bunny = GameObject.Find("Bunny").GetComponent<Player>();
         else Destroy(GameObject.Find("Bunny"));
         
-        if (isDuckPlaying) Duck = GameObject.Find("Duck");
+        if (isDuckPlaying) Duck = GameObject.Find("Duck").GetComponent<Player>();
         else Destroy(GameObject.Find("Duck"));
         
-        if (isChickenPlaying) Chicken = GameObject.Find("Chicken");
+        if (isChickenPlaying) Chicken = GameObject.Find("Chicken").GetComponent<Player>();
         else Destroy(GameObject.Find("Chicken"));
 
         if (isBatPlaying) {
-            Bat.GetComponent<Player>().moveAllowed = false;
-            Bat.GetComponent<Player>().myTurn = 1;
+            Bat.moveAllowed = false;
+            Bat.myTurn = 1;
         }
 
         if (isBunnyPlaying) {
-            Bunny.GetComponent<Player>().moveAllowed = false;
-            Bunny.GetComponent<Player>().myTurn = 2;
+            Bunny.moveAllowed = false;
+            Bunny.myTurn = 2;
 
         }
 
         if (isDuckPlaying) {
-            Duck.GetComponent<Player>().moveAllowed = false;
-            Duck.GetComponent<Player>().myTurn = 3;
+            Duck.moveAllowed = false;
+            Duck.myTurn = 3;
         }
 
         if (isChickenPlaying) {
-            Chicken.GetComponent<Player>().moveAllowed = false;
-            Chicken.GetComponent<Player>().myTurn = 4;
+            Chicken.moveAllowed = false;
+            Chicken.myTurn = 4;
         }
 
         //whoWinsTextShadow.gameObject.SetActive(false);
@@ -62,28 +58,25 @@ public class GameControl : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    private void Update() {
 
         if (isBatPlaying) {
-            if (Bat.GetComponent<Player>().iterator >= diceSideThrown) {
-                if (Bat.GetComponent<Player>().transform.position == Bat.GetComponent<Player>()
-                    .waypoints[Bat.GetComponent<Player>().waypointIndex].transform.position) {
-                    Bat.GetComponent<Player>().iterator = 0;
-                    Bat.GetComponent<Player>().moveAllowed = false;
+            if (Bat.iterator >= diceSideThrown) {
+                if (Bat.transform.position == Bat.waypoints[Bat.waypointIndex].transform.position) {
+                    Bat.iterator = 0;
+                    Bat.moveAllowed = false;
                     Dice.playerIsMoving = false;
                     
-                    if(isBunnyPlaying) Bunny.GetComponent<Player>().refreshEq = true;
-                    else if(isDuckPlaying) Duck.GetComponent<Player>().refreshEq = true;
-                    else if(isChickenPlaying) Chicken.GetComponent<Player>().refreshEq = true;
+                    if(isBunnyPlaying) Bunny.refreshEq = true;
+                    else if(isDuckPlaying) Duck.refreshEq = true;
+                    else if(isChickenPlaying) Chicken.refreshEq = true;
                 }
 
                 //player1MoveText.gameObject.SetActive(false);
                 //player2MoveText.gameObject.SetActive(true);
-                BatStartWaypoint = Bat.GetComponent<Player>().waypointIndex - 1;
             }
             
-            if (Bat.GetComponent<Player>().waypointIndex == Bat.GetComponent<Player>().waypoints.Length) {
+            if (Bat.waypointIndex == Bat.waypoints.Length) {
                 //whoWinsTextShadow.gameObject.SetActive(true);
                 //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
                 gameOver = true;
@@ -91,24 +84,22 @@ public class GameControl : MonoBehaviour {
         }
         
         if (isBunnyPlaying) {
-            if (Bunny.GetComponent<Player>().iterator >= diceSideThrown) {
-                if (Bunny.GetComponent<Player>().transform.position == Bunny.GetComponent<Player>()
-                    .waypoints[Bunny.GetComponent<Player>().waypointIndex].transform.position) {
-                    Bunny.GetComponent<Player>().iterator = 0;
-                    Bunny.GetComponent<Player>().moveAllowed = false;
+            if (Bunny.iterator >= diceSideThrown) {
+                if (Bunny.transform.position == Bunny.waypoints[Bunny.waypointIndex].transform.position) {
+                    Bunny.iterator = 0;
+                    Bunny.moveAllowed = false;
                     Dice.playerIsMoving = false;
 
-                    if (isDuckPlaying) Duck.GetComponent<Player>().refreshEq = true;
-                    else if (isChickenPlaying) Chicken.GetComponent<Player>().refreshEq = true;
-                    else if (isBatPlaying) Bat.GetComponent<Player>().refreshEq = true;
+                    if (isDuckPlaying) Duck.refreshEq = true;
+                    else if (isChickenPlaying) Chicken.refreshEq = true;
+                    else if (isBatPlaying) Bat.refreshEq = true;
                 }
 
                 //player1MoveText.gameObject.SetActive(false);
                 //player2MoveText.gameObject.SetActive(true);
-                BunnyStartWaypoint = Bunny.GetComponent<Player>().waypointIndex - 1;
             }
             
-            if (Bunny.GetComponent<Player>().waypointIndex == Bunny.GetComponent<Player>().waypoints.Length) {
+            if (Bunny.waypointIndex == Bunny.waypoints.Length) {
                 //whoWinsTextShadow.gameObject.SetActive(true);
                 //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
                 gameOver = true;
@@ -116,24 +107,22 @@ public class GameControl : MonoBehaviour {
         }
         
         if (isDuckPlaying) {
-            if (Duck.GetComponent<Player>().iterator >= diceSideThrown) {
-                if (Duck.GetComponent<Player>().transform.position == Duck.GetComponent<Player>()
-                    .waypoints[Duck.GetComponent<Player>().waypointIndex].transform.position) {
-                    Duck.GetComponent<Player>().iterator = 0;
-                    Duck.GetComponent<Player>().moveAllowed = false;
+            if (Duck.iterator >= diceSideThrown) {
+                if (Duck.transform.position == Duck.waypoints[Duck.waypointIndex].transform.position) {
+                    Duck.iterator = 0;
+                    Duck.moveAllowed = false;
                     Dice.playerIsMoving = false;
 
-                    if (isChickenPlaying) Chicken.GetComponent<Player>().refreshEq = true;
-                    else if (isBatPlaying) Bat.GetComponent<Player>().refreshEq = true;
-                    else if (isBunnyPlaying) Bunny.GetComponent<Player>().refreshEq = true;
+                    if (isChickenPlaying) Chicken.refreshEq = true;
+                    else if (isBatPlaying) Bat.refreshEq = true;
+                    else if (isBunnyPlaying) Bunny.refreshEq = true;
                 }
 
                 //player1MoveText.gameObject.SetActive(false);
                 //player2MoveText.gameObject.SetActive(true);
-                DuckStartWaypoint = Duck.GetComponent<Player>().waypointIndex - 1;
             }
             
-            if (Duck.GetComponent<Player>().waypointIndex == Duck.GetComponent<Player>().waypoints.Length) {
+            if (Duck.waypointIndex == Duck.waypoints.Length) {
                 //whoWinsTextShadow.gameObject.SetActive(true);
                 //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
                 gameOver = true;
@@ -141,24 +130,22 @@ public class GameControl : MonoBehaviour {
         }
         
         if (isChickenPlaying) {
-            if (Chicken.GetComponent<Player>().iterator >= diceSideThrown) {
-                if (Chicken.GetComponent<Player>().transform.position == Chicken.GetComponent<Player>()
-                    .waypoints[Chicken.GetComponent<Player>().waypointIndex].transform.position) {
-                    Chicken.GetComponent<Player>().iterator = 0;
-                    Chicken.GetComponent<Player>().moveAllowed = false;
+            if (Chicken.iterator >= diceSideThrown) {
+                if (Chicken.transform.position == Chicken.waypoints[Chicken.waypointIndex].transform.position) {
+                    Chicken.iterator = 0;
+                    Chicken.moveAllowed = false;
                     Dice.playerIsMoving = false;
 
-                    if (isBatPlaying) Bat.GetComponent<Player>().refreshEq = true;
-                    else if (isBunnyPlaying) Bunny.GetComponent<Player>().refreshEq = true;
-                    else if (isDuckPlaying) Duck.GetComponent<Player>().refreshEq = true;
+                    if (isBatPlaying) Bat.refreshEq = true;
+                    else if (isBunnyPlaying) Bunny.refreshEq = true;
+                    else if (isDuckPlaying) Duck.refreshEq = true;
                 }
 
                 //player1MoveText.gameObject.SetActive(false);
                 //player2MoveText.gameObject.SetActive(true);
-                ChickenStartWaypoint = Chicken.GetComponent<Player>().waypointIndex - 1;
             }
             
-            if (Chicken.GetComponent<Player>().waypointIndex == Chicken.GetComponent<Player>().waypoints.Length) {
+            if (Chicken.waypointIndex == Chicken.waypoints.Length) {
                 //whoWinsTextShadow.gameObject.SetActive(true);
                 //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
                 gameOver = true;
@@ -170,19 +157,19 @@ public class GameControl : MonoBehaviour {
     {
         switch (playerToMove) { 
             case 1:
-                Bat.GetComponent<Player>().moveAllowed = true;
+                Bat.moveAllowed = true;
                 break;
 
             case 2:
-                Bunny.GetComponent<Player>().moveAllowed = true;
+                Bunny.moveAllowed = true;
                 break;
             
             case 3:
-                Duck.GetComponent<Player>().moveAllowed = true;
+                Duck.moveAllowed = true;
                 break;
             
             case 4:
-                Chicken.GetComponent<Player>().moveAllowed = true;
+                Chicken.moveAllowed = true;
                 break;
             
         }

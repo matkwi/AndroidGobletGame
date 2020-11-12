@@ -38,12 +38,14 @@ public class Player : MonoBehaviour {
     private string KEY = "Key";
     private string NONE = "";
     private static bool attackDone = false;
+    private bool stopForChest;
     
     private GameObject Dice;
     private Images images;
 
     // Use this for initialization
 	private void Start () {
+        stopForChest = false;
         moveAllowed = false;
         waypointIndex = 0;
         iterator = 0;
@@ -109,6 +111,12 @@ public class Player : MonoBehaviour {
         else if (other.CompareTag("Key") && iterator == GameControl.diceSideThrown) {
             Random random = new Random();
             equipment.AddKey(random.Next(8, 13));
+        }
+        else if (other.CompareTag("Chest")) {
+            stopForChest = true;
+            Chest chest = GameObject.Find("Chest").GetComponent<Chest>();
+            Chest.changePosition = true;
+            stopForChest = false;
         }
     }
 
@@ -280,7 +288,7 @@ public class Player : MonoBehaviour {
     private void Move()
     {
         if (waypointIndex <= waypoints.Length - 1) {
-            if (transform.position == waypoints[waypointIndex].transform.position) {
+            if (transform.position == waypoints[waypointIndex].transform.position && !stopForChest) {
                 if (transform.position == waypoints[0].transform.position) {
                     waypointIndex += 0;
                     if (arrowDirection.Equals("ArrowDown1")) {

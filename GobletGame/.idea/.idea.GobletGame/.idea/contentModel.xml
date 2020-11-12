@@ -7,6 +7,7 @@
         <e p="Scripts" t="Include">
           <e p="CameraMovementScript.cs" t="Include" />
           <e p="CameraRestrictions.cs" t="Include" />
+          <e p="Chest.cs" t="Include" />
           <e p="Dice.cs" t="Include" />
           <e p="Equipment.cs" t="Include" />
           <e p="GameControl.cs" t="Include" />

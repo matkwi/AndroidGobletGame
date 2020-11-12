@@ -9,6 +9,7 @@ public class Item {
         Gun,
         MedKit,
         Key,
+        Goblet,
     }
 
     public ItemType itemType;

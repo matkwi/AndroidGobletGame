@@ -60,6 +60,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraMovementScript.cs" />
      <Compile Include="Assets\Scripts\CameraRestrictions.cs" />
+     <Compile Include="Assets\Scripts\Chest.cs" />
      <Compile Include="Assets\Scripts\Dice.cs" />
      <Compile Include="Assets\Scripts\Equipment.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />

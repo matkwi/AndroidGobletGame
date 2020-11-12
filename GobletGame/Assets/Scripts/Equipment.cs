@@ -11,22 +11,26 @@ public class Equipment {
     private List<Item> guns;
     private List<Item> medKits;
     private List<Item> keys;
+    private List<Item> goblets;
 
     private TextMeshProUGUI bombAmount;
     private TextMeshProUGUI gunAmount;
     private TextMeshProUGUI medkitAmount;
     private TextMeshProUGUI keyAmount;
+    private TextMeshProUGUI gobletAmount;
 
     public Equipment() {
         bombs = new List<Item>();
         guns = new List<Item>();
         medKits = new List<Item>();
         keys = new List<Item>();
+        goblets = new List<Item>();
         
         bombAmount = GameObject.Find("bombAmount").GetComponent<TextMeshProUGUI>();
         gunAmount = GameObject.Find("gunAmount").GetComponent<TextMeshProUGUI>();
         medkitAmount = GameObject.Find("medkitAmount").GetComponent<TextMeshProUGUI>();
         keyAmount = GameObject.Find("keyAmount").GetComponent<TextMeshProUGUI>();
+        //gobletAmount = GameObject.Find("gobletAmount").GetComponent<TextMeshProUGUI>();
     }
 
     public void AddBomb() {
@@ -50,6 +54,11 @@ public class Equipment {
         }
         keyAmount.SetText(keys.Count.ToString());
     }
+    
+    public void AddGoblet() {
+        goblets.Add(new Item { itemType = Item.ItemType.Goblet });
+        gobletAmount.SetText(goblets.Count.ToString());
+    }
 
     public void DeleteBomb() {
         bombs.RemoveAt(getBombsCount() - 1);
@@ -64,6 +73,11 @@ public class Equipment {
     public void DeleteMedKit() {
         medKits.RemoveAt(getMedKitsCount() - 1);
         medkitAmount.SetText(medKits.Count.ToString());
+    }
+    
+    public void DeleteGoblet() {
+        goblets.RemoveAt(getGobletsCount() - 1);
+        gobletAmount.SetText(goblets.Count.ToString());
     }
     
     public void DeleteKey(int amount) {
@@ -89,6 +103,10 @@ public class Equipment {
     public List<Item> getKeys() {
         return keys;
     }
+    
+    public List<Item> getGoblets() {
+        return goblets;
+    }
 
     public int getBombsCount() {
         return bombs.Count;
@@ -105,6 +123,10 @@ public class Equipment {
     public int getKeysCount() {
         return keys.Count;
     }
+    
+    public int getGobletsCount() {
+        return goblets.Count;
+    }
 
     public void setBombAmount(int number) {
         bombAmount.SetText(number.ToString());
@@ -120,6 +142,10 @@ public class Equipment {
     
     public void setKeyAmount(int number) {
         keyAmount.SetText(number.ToString());
+    }
+    
+    public void setGobletAmount(int number) {
+        //gobletAmount.SetText(number.ToString());
     }
 
     public void refreshEquipment() {
