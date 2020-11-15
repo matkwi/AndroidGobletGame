@@ -19,7 +19,11 @@ public class Equipment {
     private TextMeshProUGUI keyAmount;
     private TextMeshProUGUI gobletAmount;
 
-    public Equipment() {
+    private string name;
+
+    public Equipment(string name) {
+        this.name = name;
+        
         bombs = new List<Item>();
         guns = new List<Item>();
         medKits = new List<Item>();
@@ -30,7 +34,7 @@ public class Equipment {
         gunAmount = GameObject.Find("gunAmount").GetComponent<TextMeshProUGUI>();
         medkitAmount = GameObject.Find("medkitAmount").GetComponent<TextMeshProUGUI>();
         keyAmount = GameObject.Find("keyAmount").GetComponent<TextMeshProUGUI>();
-        //gobletAmount = GameObject.Find("gobletAmount").GetComponent<TextMeshProUGUI>();
+        gobletAmount = GameObject.Find(name + "GobletAmount").GetComponent<TextMeshProUGUI>();
     }
 
     public void AddBomb() {
@@ -145,7 +149,7 @@ public class Equipment {
     }
     
     public void setGobletAmount(int number) {
-        //gobletAmount.SetText(number.ToString());
+        gobletAmount.SetText(number.ToString());
     }
 
     public void refreshEquipment() {

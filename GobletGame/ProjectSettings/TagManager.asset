@@ -10,6 +10,8 @@ TagManager:
   - Gun
   - MedKit
   - Key
+  - Chest
+  - BatGoblets
   layers:
   - Default
   - TransparentFX

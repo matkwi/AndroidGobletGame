@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,20 +10,45 @@ public class Dice : MonoBehaviour {
     public int whosTurn = 1;
     private bool coroutineAllowed = true;
     public static bool playerIsMoving = false;
+    public bool AIPlayerDiceRoll;
+    
+    private Images images;
 
-	// Use this for initialization
+    // Use this for initialization
 	private void Start () {
+        images = GameObject.Find("Images").GetComponent<Images>();
+        AIPlayerDiceRoll = false;
         rend = GetComponent<SpriteRenderer>();
         diceSides = Resources.LoadAll<Sprite>("DiceSides/");
         rend.sprite = diceSides[9];
 	}
 
+    private void Update() {
+        if (!playerIsMoving) {
+            if (!GameControl.gameOver && coroutineAllowed) {
+                if (AIPlayerDiceRoll) {
+                    SetEquipmentImages();
+                    StartCoroutine("RollTheDice");
+                    AIPlayerDiceRoll = false;
+                }
+            }
+        }
+    }
+
     private void OnMouseDown()
     {
         if (!playerIsMoving) {
-            if (!GameControl.gameOver && coroutineAllowed)
+            if (!GameControl.gameOver && coroutineAllowed) {
+                SetEquipmentImages();
                 StartCoroutine("RollTheDice");
+            }
         }
+    }
+
+    private void SetEquipmentImages() {
+        images.SetBombSelected(false);
+        images.SetGunSelected(false);
+        images.SetMedKitSelected(false);
     }
 
     private IEnumerator RollTheDice()

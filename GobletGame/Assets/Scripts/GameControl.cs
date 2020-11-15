@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour {
@@ -6,7 +7,10 @@ public class GameControl : MonoBehaviour {
     //private static GameObject whoWinsTextShadow, player1MoveText, player2MoveText;
 
     public static Player Bat, Bunny, Duck, Chicken;
+    private bool AIBat = false, AIBunny = false, AIDuck = false, AIChicken = false;
     public static bool isBatPlaying = true, isBunnyPlaying = true, isDuckPlaying = true, isChickenPlaying = true;
+    
+    public static List<string> charactersPlaying = new List<string>();
     
     public static int diceSideThrown = 10;
 
@@ -19,16 +23,32 @@ public class GameControl : MonoBehaviour {
         //player1MoveText = GameObject.Find("Player1MoveText");
         //player2MoveText = GameObject.Find("Player2MoveText");
 
-        if (isBatPlaying) Bat = GameObject.Find("Bat").GetComponent<Player>();
+        if (isBatPlaying) {
+            Bat = GameObject.Find("Bat").GetComponent<Player>();
+            Bat.AIPlayer = AIBat;
+            charactersPlaying.Add("Bat");
+        }
         else Destroy(GameObject.Find("Bat"));
-        
-        if (isBunnyPlaying) Bunny = GameObject.Find("Bunny").GetComponent<Player>();
+
+        if (isBunnyPlaying) {
+            Bunny = GameObject.Find("Bunny").GetComponent<Player>();
+            Bunny.AIPlayer = AIBunny;
+            charactersPlaying.Add("Bunny");
+        }
         else Destroy(GameObject.Find("Bunny"));
-        
-        if (isDuckPlaying) Duck = GameObject.Find("Duck").GetComponent<Player>();
+
+        if (isDuckPlaying) {
+            Duck = GameObject.Find("Duck").GetComponent<Player>();
+            Duck.AIPlayer = AIDuck;
+            charactersPlaying.Add("Duck");
+        }
         else Destroy(GameObject.Find("Duck"));
-        
-        if (isChickenPlaying) Chicken = GameObject.Find("Chicken").GetComponent<Player>();
+
+        if (isChickenPlaying) {
+            Chicken = GameObject.Find("Chicken").GetComponent<Player>();
+            Chicken.AIPlayer = AIChicken;
+            charactersPlaying.Add("Chicken");
+        }
         else Destroy(GameObject.Find("Chicken"));
 
         if (isBatPlaying) {
@@ -39,7 +59,6 @@ public class GameControl : MonoBehaviour {
         if (isBunnyPlaying) {
             Bunny.moveAllowed = false;
             Bunny.myTurn = 2;
-
         }
 
         if (isDuckPlaying) {
@@ -66,6 +85,7 @@ public class GameControl : MonoBehaviour {
                     Bat.iterator = 0;
                     Bat.moveAllowed = false;
                     Dice.playerIsMoving = false;
+                    Bat.DiceRolled = false;
                     
                     if(isBunnyPlaying) Bunny.refreshEq = true;
                     else if(isDuckPlaying) Duck.refreshEq = true;
@@ -89,6 +109,7 @@ public class GameControl : MonoBehaviour {
                     Bunny.iterator = 0;
                     Bunny.moveAllowed = false;
                     Dice.playerIsMoving = false;
+                    Bunny.DiceRolled = false;
 
                     if (isDuckPlaying) Duck.refreshEq = true;
                     else if (isChickenPlaying) Chicken.refreshEq = true;
@@ -112,6 +133,7 @@ public class GameControl : MonoBehaviour {
                     Duck.iterator = 0;
                     Duck.moveAllowed = false;
                     Dice.playerIsMoving = false;
+                    Duck.DiceRolled = false;
 
                     if (isChickenPlaying) Chicken.refreshEq = true;
                     else if (isBatPlaying) Bat.refreshEq = true;
@@ -135,6 +157,7 @@ public class GameControl : MonoBehaviour {
                     Chicken.iterator = 0;
                     Chicken.moveAllowed = false;
                     Dice.playerIsMoving = false;
+                    Chicken.DiceRolled = false;
 
                     if (isBatPlaying) Bat.refreshEq = true;
                     else if (isBunnyPlaying) Bunny.refreshEq = true;

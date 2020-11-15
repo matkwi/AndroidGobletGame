@@ -10,7 +10,7 @@ public class Chest : MonoBehaviour
 
     private int waypointIndex;
 
-    public static bool changePosition;
+    public bool changePosition;
     
     // Start is called before the first frame update
     void Start() {
