@@ -7,7 +7,7 @@ public class Dice : MonoBehaviour {
 
     private Sprite[] diceSides;
     private SpriteRenderer rend;
-    public int whosTurn = 1;
+    public static int whosTurn = 1;
     private bool coroutineAllowed = true;
     public static bool playerIsMoving = false;
     public bool AIPlayerDiceRoll;
@@ -17,6 +17,7 @@ public class Dice : MonoBehaviour {
     // Use this for initialization
 	private void Start () {
         images = GameObject.Find("Images").GetComponent<Images>();
+        images.SetWhosTurnImage(whosTurn);
         AIPlayerDiceRoll = false;
         rend = GetComponent<SpriteRenderer>();
         diceSides = Resources.LoadAll<Sprite>("DiceSides/");

@@ -15,9 +15,13 @@ public class GameControl : MonoBehaviour {
     public static int diceSideThrown = 10;
 
     public static bool gameOver = false;
+    
+    private Images images;
 
     // Use this for initialization
     void Start () {
+        
+        images = GameObject.Find("Images").GetComponent<Images>();
 
         //whoWinsTextShadow = GameObject.Find("WhoWinsText");
         //player1MoveText = GameObject.Find("Player1MoveText");
@@ -85,6 +89,7 @@ public class GameControl : MonoBehaviour {
                     Bat.iterator = 0;
                     Bat.moveAllowed = false;
                     Dice.playerIsMoving = false;
+                    images.SetWhosTurnImage(Dice.whosTurn);
                     Bat.DiceRolled = false;
                     
                     if(isBunnyPlaying) Bunny.refreshEq = true;
@@ -109,6 +114,7 @@ public class GameControl : MonoBehaviour {
                     Bunny.iterator = 0;
                     Bunny.moveAllowed = false;
                     Dice.playerIsMoving = false;
+                    images.SetWhosTurnImage(Dice.whosTurn);
                     Bunny.DiceRolled = false;
 
                     if (isDuckPlaying) Duck.refreshEq = true;
@@ -133,6 +139,7 @@ public class GameControl : MonoBehaviour {
                     Duck.iterator = 0;
                     Duck.moveAllowed = false;
                     Dice.playerIsMoving = false;
+                    images.SetWhosTurnImage(Dice.whosTurn);
                     Duck.DiceRolled = false;
 
                     if (isChickenPlaying) Chicken.refreshEq = true;
@@ -157,6 +164,7 @@ public class GameControl : MonoBehaviour {
                     Chicken.iterator = 0;
                     Chicken.moveAllowed = false;
                     Dice.playerIsMoving = false;
+                    images.SetWhosTurnImage(Dice.whosTurn);
                     Chicken.DiceRolled = false;
 
                     if (isBatPlaying) Bat.refreshEq = true;

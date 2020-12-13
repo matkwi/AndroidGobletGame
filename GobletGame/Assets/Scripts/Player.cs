@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -54,6 +55,8 @@ public class Player : MonoBehaviour {
     
     private Dice Dice;
     private Images images;
+
+    private TextMeshProUGUI chooseDirection;
     
     // Use this for initialization
 	private void Start () {
@@ -70,8 +73,7 @@ public class Player : MonoBehaviour {
         equipment.AddKey(30);
         Dice = GameObject.Find("Dice").GetComponent<Dice>();
         images = GameObject.Find("Images").GetComponent<Images>();
-        equipment.AddGun();
-        equipment.AddGun();
+        chooseDirection = GameObject.Find("ChooseDirection").GetComponent<TextMeshProUGUI>();
     }
 
     private void WaitForExplosion(ParticleSystem animation)
@@ -394,16 +396,19 @@ public class Player : MonoBehaviour {
         if (waypointIndex <= waypoints.Length - 1) {
             if (transform.position == waypoints[waypointIndex].transform.position && !stopForChest) {
                 if (transform.position == waypoints[0].transform.position) {
+                    if(chooseDirection.text.Equals("")) chooseDirection.SetText("Choose Direction");
                     waypointIndex += 0;
                     if (AIPlayer) {
                         SetRandomArrowDirection(new List<string>{"ArrowDown1", "ArrowRight1"});
                     }
                     if (arrowDirection.Equals("ArrowDown1")) {
+                        chooseDirection.SetText("");
                         waypointIndex += 57;
                         iterator += 1;
                     }
 
                     if (arrowDirection.Equals("ArrowRight1")) {
+                        chooseDirection.SetText("");
                         waypointIndex += 1;
                         iterator += 1;
                     }
@@ -413,16 +418,19 @@ public class Player : MonoBehaviour {
                     iterator += 1;
                 }
                 else if (transform.position == waypoints[19].transform.position) {
+                    if(chooseDirection.text.Equals("")) chooseDirection.SetText("Choose Direction");
                     waypointIndex += 0;
                     if (AIPlayer) {
                         SetRandomArrowDirection(new List<string>{"ArrowDown2", "ArrowUp1"});
                     }
                     if (arrowDirection.Equals("ArrowDown2")) {
+                        chooseDirection.SetText("");
                         waypointIndex = 58;
                         iterator += 1;
                     }
 
                     if (arrowDirection.Equals("ArrowUp1")) {
+                        chooseDirection.SetText("");
                         waypointIndex += 1;
                         iterator += 1;
                     }
@@ -432,16 +440,19 @@ public class Player : MonoBehaviour {
                     iterator += 1;
                 }
                 else if (transform.position == waypoints[37].transform.position) {
+                    if(chooseDirection.text.Equals("")) chooseDirection.SetText("Choose Direction");
                     waypointIndex += 0;
                     if (AIPlayer) {
                         SetRandomArrowDirection(new List<string>{"ArrowDown3", "ArrowLeft1"});
                     }
                     if (arrowDirection.Equals("ArrowDown3")) {
+                        chooseDirection.SetText("");
                         waypointIndex = 67;
                         iterator += 1;
                     }
 
                     if (arrowDirection.Equals("ArrowLeft1")) {
+                        chooseDirection.SetText("");
                         waypointIndex += 1;
                         iterator += 1;
                     }
@@ -451,16 +462,19 @@ public class Player : MonoBehaviour {
                     iterator += 1;
                 }
                 else if (transform.position == waypoints[45].transform.position) {
+                    if(chooseDirection.text.Equals("")) chooseDirection.SetText("Choose Direction");
                     waypointIndex += 0;
                     if (AIPlayer) {
                         SetRandomArrowDirection(new List<string>{"ArrowRight2", "ArrowUp2"});
                     }
                     if (arrowDirection.Equals("ArrowRight2")) {
+                        chooseDirection.SetText("");
                         waypointIndex = 76;
                         iterator += 1;
                     }
 
                     if (arrowDirection.Equals("ArrowUp2")) {
+                        chooseDirection.SetText("");
                         waypointIndex += 1;
                         iterator += 1;
                     }
