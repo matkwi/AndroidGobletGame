@@ -16,6 +16,8 @@
           <e p="Images.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
+          <e p="Sounds.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

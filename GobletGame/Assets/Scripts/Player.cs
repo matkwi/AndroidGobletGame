@@ -87,7 +87,10 @@ public class Player : MonoBehaviour {
             yield return null;
         } while ( animation.isPlaying );
         currentHealth = maxHealth;
-        waypointIndex = 0;
+        int[] tab = {0, 19, 37, 45};
+        Random random = new Random();
+        int x = random.Next(0, tab.Length);
+        waypointIndex = tab[x];
         transform.position = waypoints[waypointIndex].transform.position;
         healthBar.SetHealth(currentHealth);
     }
@@ -155,22 +158,26 @@ public class Player : MonoBehaviour {
             Vector3 endPoint = images.Bomb.transform.position;
             Animation(transform.position, endPoint, "BombAnimation");
             equipment.AddBomb();
+            SoundManager.PlayCollectSound();
         }
         else if (other.CompareTag("Gun") && iterator == GameControl.diceSideThrown) {
             Vector3 endPoint = images.Gun.transform.position;
             Animation(transform.position, endPoint, "GunAnimation");
             equipment.AddGun();
+            SoundManager.PlayCollectSound();
         }
         else if (other.CompareTag("MedKit") && iterator == GameControl.diceSideThrown) {
             Vector3 endPoint = images.MedKit.transform.position;
             Animation(transform.position, endPoint, "MedKitAnimation");
             equipment.AddMedKit();
+            SoundManager.PlayCollectSound();
         }
         else if (other.CompareTag("Key") && iterator == GameControl.diceSideThrown) {
             Vector3 endPoint = images.Key.transform.position;
             Animation(transform.position, endPoint, "KeyAnimation");
             Random random = new Random();
             equipment.AddKey(random.Next(8, 13));
+            SoundManager.PlayCollectSound();
         }
         else if (other.CompareTag("Chest")) {
             stopForChest = true;
@@ -179,6 +186,7 @@ public class Player : MonoBehaviour {
                 Animation(transform.position, endPoint, "GobletAnimation");
                 equipment.DeleteKey(40);
                 equipment.AddGoblet();
+                SoundManager.PlayCollectSound();
                 Chest chest = GameObject.Find("Chest").GetComponent<Chest>();
                 chest.changePosition = true;
             }
@@ -257,6 +265,7 @@ public class Player : MonoBehaviour {
         if (weaponChosen.Equals(BOMB)) {
             if (player.Equals("Bat") && myTurn != 1) {
                 ParticleSystem explosionAnimation = AnimateExplosion(player);
+                SoundManager.PlayBombSound();
                 GameControl.Bat.GetComponent<Player>().TakeDamage(4, explosionAnimation);
                 equipment.DeleteBomb();
                 equipment.setBombAmount(equipment.getBombsCount()); 
@@ -267,6 +276,7 @@ public class Player : MonoBehaviour {
             }
             else if (player.Equals("Bunny") && myTurn != 2) {
                 ParticleSystem explosionAnimation = AnimateExplosion(player);
+                SoundManager.PlayBombSound();
                 GameControl.Bunny.GetComponent<Player>().TakeDamage(4, explosionAnimation);
                 equipment.DeleteBomb();
                 equipment.setBombAmount(equipment.getBombsCount());
@@ -277,6 +287,7 @@ public class Player : MonoBehaviour {
             }
             else if (player.Equals("Duck") && myTurn != 3) {
                 ParticleSystem explosionAnimation = AnimateExplosion(player);
+                SoundManager.PlayBombSound();
                 GameControl.Duck.GetComponent<Player>().TakeDamage(4, explosionAnimation);
                 equipment.DeleteBomb();
                 equipment.setBombAmount(equipment.getBombsCount());
@@ -287,6 +298,7 @@ public class Player : MonoBehaviour {
             }
             else if (player.Equals("Chicken") && myTurn != 4) {
                 ParticleSystem explosionAnimation = AnimateExplosion(player);
+                SoundManager.PlayBombSound();
                 GameControl.Chicken.GetComponent<Player>().TakeDamage(4, explosionAnimation);
                 equipment.DeleteBomb();
                 equipment.setBombAmount(equipment.getBombsCount());
@@ -299,6 +311,7 @@ public class Player : MonoBehaviour {
         else if (weaponChosen.Equals(GUN)) {
             if (player.Equals("Bat") && myTurn != 1) {
                 ParticleSystem explosionAnimation = AnimateExplosion(player);
+                SoundManager.PlayGunSound();
                 GameControl.Bat.GetComponent<Player>().TakeDamage(6, explosionAnimation);
                 equipment.DeleteGun();
                 equipment.setGunAmount(equipment.getGunsCount());
@@ -309,6 +322,7 @@ public class Player : MonoBehaviour {
             }
             else if (player.Equals("Bunny") && myTurn != 2) {
                 ParticleSystem explosionAnimation = AnimateExplosion(player);
+                SoundManager.PlayGunSound();
                 GameControl.Bunny.GetComponent<Player>().TakeDamage(6, explosionAnimation);
                 equipment.DeleteGun();
                 equipment.setGunAmount(equipment.getGunsCount());
@@ -319,6 +333,7 @@ public class Player : MonoBehaviour {
             }
             else if (player.Equals("Duck") && myTurn != 3) {
                 ParticleSystem explosionAnimation = AnimateExplosion(player);
+                SoundManager.PlayGunSound();
                 GameControl.Duck.GetComponent<Player>().TakeDamage(6, explosionAnimation);
                 equipment.DeleteGun();
                 equipment.setGunAmount(equipment.getGunsCount());
@@ -329,6 +344,7 @@ public class Player : MonoBehaviour {
             }
             else if (player.Equals("Chicken") && myTurn != 4) {
                 ParticleSystem explosionAnimation = AnimateExplosion(player);
+                SoundManager.PlayGunSound();
                 GameControl.Chicken.GetComponent<Player>().TakeDamage(6, explosionAnimation);
                 equipment.DeleteGun();
                 equipment.setGunAmount(equipment.getGunsCount());
@@ -341,6 +357,7 @@ public class Player : MonoBehaviour {
         else if (weaponChosen.Equals(MEDKIT)) {
             if (player.Equals("Bat")) {
                 GameControl.Bat.GetComponent<Player>().GiveHealth(5);
+                SoundManager.PlayMedKitSound();
                 equipment.DeleteMedKit();
                 equipment.setMedKitAmount(equipment.getMedKitsCount());
                 isWeaponChosen = false;
@@ -351,6 +368,7 @@ public class Player : MonoBehaviour {
             }
             else if (player.Equals("Bunny")) {
                 GameControl.Bunny.GetComponent<Player>().GiveHealth(5);
+                SoundManager.PlayMedKitSound();
                 equipment.DeleteMedKit();
                 equipment.setMedKitAmount(equipment.getMedKitsCount());
                 isWeaponChosen = false;
@@ -361,6 +379,7 @@ public class Player : MonoBehaviour {
             }
             else if (player.Equals("Duck")) {
                 GameControl.Duck.GetComponent<Player>().GiveHealth(5);
+                SoundManager.PlayMedKitSound();
                 equipment.DeleteMedKit();
                 equipment.setMedKitAmount(equipment.getMedKitsCount());
                 isWeaponChosen = false;
@@ -371,6 +390,7 @@ public class Player : MonoBehaviour {
             }
             else if (player.Equals("Chicken")) {
                 GameControl.Chicken.GetComponent<Player>().GiveHealth(5);
+                SoundManager.PlayMedKitSound();
                 equipment.DeleteMedKit();
                 equipment.setMedKitAmount(equipment.getMedKitsCount());
                 isWeaponChosen = false;
