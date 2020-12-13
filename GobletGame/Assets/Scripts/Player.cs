@@ -38,7 +38,7 @@ public class Player : MonoBehaviour {
     public HealthBar healthBar;
     private Equipment equipment;
     [HideInInspector]
-    public bool refreshEq = true;
+    public bool refreshEq = false;
     [HideInInspector]
     public int myTurn;
     private bool isWeaponChosen = false;
@@ -50,12 +50,14 @@ public class Player : MonoBehaviour {
     private string NONE = "";
     private static bool attackDone = false;
     private bool stopForChest;
+    public static bool Animated;
     
     private Dice Dice;
     private Images images;
-
+    
     // Use this for initialization
 	private void Start () {
+        Animated = false;
         DiceRolled = false;
         stopForChest = false;
         moveAllowed = false;
@@ -68,6 +70,24 @@ public class Player : MonoBehaviour {
         equipment.AddKey(30);
         Dice = GameObject.Find("Dice").GetComponent<Dice>();
         images = GameObject.Find("Images").GetComponent<Images>();
+        equipment.AddGun();
+        equipment.AddGun();
+    }
+
+    private void WaitForExplosion(ParticleSystem animation)
+    {
+        StartCoroutine(PauseGame(animation));
+    }
+
+    private IEnumerator PauseGame(ParticleSystem animation) {
+        do
+        {
+            yield return null;
+        } while ( animation.isPlaying );
+        currentHealth = maxHealth;
+        waypointIndex = 0;
+        transform.position = waypoints[waypointIndex].transform.position;
+        healthBar.SetHealth(currentHealth);
     }
 	
 	// Update is called once per frame
@@ -82,9 +102,9 @@ public class Player : MonoBehaviour {
         }
 
         if (refreshEq) {
-            equipment.refreshEquipment();
             refreshEq = false;
             attackDone = false;
+            equipment.refreshEquipment();
         }
 
         if (AIPlayer && myTurn == Dice.whosTurn && !DiceRolled && !Dice.playerIsMoving) {
@@ -119,23 +139,42 @@ public class Player : MonoBehaviour {
             Move();
     }
 
+    private void Animation(Vector3 startPoint, Vector3 endPoint, string animationObject) {
+        ParticleSystem gobletAnimation = GameObject.Find(animationObject + gameObject.name).GetComponent<ParticleSystem>();
+        if(!gobletAnimation.isPlaying) gobletAnimation.Play();
+        // Animation animation = GameObject.Find(animationObject).GetComponent<Animation>();
+        // animation.StartPoint = startPoint;
+        // animation.EndPoint = endPoint;
+        // animation.Animate = true;
+    }
+    
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bomb") && iterator == GameControl.diceSideThrown) {
+            Vector3 endPoint = images.Bomb.transform.position;
+            Animation(transform.position, endPoint, "BombAnimation");
             equipment.AddBomb();
         }
         else if (other.CompareTag("Gun") && iterator == GameControl.diceSideThrown) {
+            Vector3 endPoint = images.Gun.transform.position;
+            Animation(transform.position, endPoint, "GunAnimation");
             equipment.AddGun();
         }
         else if (other.CompareTag("MedKit") && iterator == GameControl.diceSideThrown) {
+            Vector3 endPoint = images.MedKit.transform.position;
+            Animation(transform.position, endPoint, "MedKitAnimation");
             equipment.AddMedKit();
         }
         else if (other.CompareTag("Key") && iterator == GameControl.diceSideThrown) {
+            Vector3 endPoint = images.Key.transform.position;
+            Animation(transform.position, endPoint, "KeyAnimation");
             Random random = new Random();
             equipment.AddKey(random.Next(8, 13));
         }
         else if (other.CompareTag("Chest")) {
             stopForChest = true;
             if (equipment.getKeysCount() >= 40) {
+                Vector3 endPoint = images.Key.transform.position;
+                Animation(transform.position, endPoint, "GobletAnimation");
                 equipment.DeleteKey(40);
                 equipment.AddGoblet();
                 Chest chest = GameObject.Find("Chest").GetComponent<Chest>();
@@ -145,9 +184,11 @@ public class Player : MonoBehaviour {
         }
     }
 
-    private void TakeDamage(int damage) {
+    private void TakeDamage(int damage, ParticleSystem animation) {
         currentHealth -= damage;
-        if (currentHealth <= 0) currentHealth = maxHealth;
+        if (currentHealth <= 0) {
+            WaitForExplosion(animation);
+        }
         healthBar.SetHealth(currentHealth);
     }
     
@@ -199,48 +240,64 @@ public class Player : MonoBehaviour {
         }
     }
 
+    private ParticleSystem AnimateExplosion(string player) {
+        ParticleSystem explosionAnimation = GameObject.Find("Explosion" + player).GetComponent<ParticleSystem>();
+        if(!explosionAnimation.isPlaying) explosionAnimation.Play();
+        return explosionAnimation;
+    }
+
+    private void AnimateHealing(string player) {
+        ParticleSystem healingAnimation = GameObject.Find("HealingAnimation" + player).GetComponent<ParticleSystem>();
+        if(!healingAnimation.isPlaying) healingAnimation.Play();
+    }
+
     private void Attack(string player) {
         if (weaponChosen.Equals(BOMB)) {
-                if (player.Equals("Bat") && myTurn != 1) {
-                    GameControl.Bat.GetComponent<Player>().TakeDamage(4);
-                    equipment.DeleteBomb();
-                    equipment.setBombAmount(equipment.getBombsCount());
-                    isWeaponChosen = false;
-                    weaponChosen = NONE;
-                    attackDone = true;
-                    images.SetBombSelected(false);
-                }
-                else if (player.Equals("Bunny") && myTurn != 2) {
-                    GameControl.Bunny.GetComponent<Player>().TakeDamage(4);
-                    equipment.DeleteBomb();
-                    equipment.setBombAmount(equipment.getBombsCount());
-                    isWeaponChosen = false;
-                    weaponChosen = NONE;
-                    attackDone = true;
-                    images.SetBombSelected(false);
-                }
-                else if (player.Equals("Duck") && myTurn != 3) {
-                    GameControl.Duck.GetComponent<Player>().TakeDamage(4);
-                    equipment.DeleteBomb();
-                    equipment.setBombAmount(equipment.getBombsCount());
-                    isWeaponChosen = false;
-                    weaponChosen = NONE;
-                    attackDone = true;
-                    images.SetBombSelected(false);
-                }
-                else if (player.Equals("Chicken") && myTurn != 4) {
-                    GameControl.Chicken.GetComponent<Player>().TakeDamage(4);
-                    equipment.DeleteBomb();
-                    equipment.setBombAmount(equipment.getBombsCount());
-                    isWeaponChosen = false;
-                    weaponChosen = NONE;
-                    attackDone = true;
-                    images.SetBombSelected(false);
-                }
+            if (player.Equals("Bat") && myTurn != 1) {
+                ParticleSystem explosionAnimation = AnimateExplosion(player);
+                GameControl.Bat.GetComponent<Player>().TakeDamage(4, explosionAnimation);
+                equipment.DeleteBomb();
+                equipment.setBombAmount(equipment.getBombsCount()); 
+                isWeaponChosen = false; 
+                weaponChosen = NONE; 
+                attackDone = true; 
+                images.SetBombSelected(false);
+            }
+            else if (player.Equals("Bunny") && myTurn != 2) {
+                ParticleSystem explosionAnimation = AnimateExplosion(player);
+                GameControl.Bunny.GetComponent<Player>().TakeDamage(4, explosionAnimation);
+                equipment.DeleteBomb();
+                equipment.setBombAmount(equipment.getBombsCount());
+                isWeaponChosen = false;
+                weaponChosen = NONE;
+                attackDone = true;
+                images.SetBombSelected(false);
+            }
+            else if (player.Equals("Duck") && myTurn != 3) {
+                ParticleSystem explosionAnimation = AnimateExplosion(player);
+                GameControl.Duck.GetComponent<Player>().TakeDamage(4, explosionAnimation);
+                equipment.DeleteBomb();
+                equipment.setBombAmount(equipment.getBombsCount());
+                isWeaponChosen = false;
+                weaponChosen = NONE;
+                attackDone = true;
+                images.SetBombSelected(false);
+            }
+            else if (player.Equals("Chicken") && myTurn != 4) {
+                ParticleSystem explosionAnimation = AnimateExplosion(player);
+                GameControl.Chicken.GetComponent<Player>().TakeDamage(4, explosionAnimation);
+                equipment.DeleteBomb();
+                equipment.setBombAmount(equipment.getBombsCount());
+                isWeaponChosen = false;
+                weaponChosen = NONE;
+                attackDone = true;
+                images.SetBombSelected(false);
+            }
         }
         else if (weaponChosen.Equals(GUN)) {
             if (player.Equals("Bat") && myTurn != 1) {
-                GameControl.Bat.GetComponent<Player>().TakeDamage(6);
+                ParticleSystem explosionAnimation = AnimateExplosion(player);
+                GameControl.Bat.GetComponent<Player>().TakeDamage(6, explosionAnimation);
                 equipment.DeleteGun();
                 equipment.setGunAmount(equipment.getGunsCount());
                 isWeaponChosen = false;
@@ -249,7 +306,8 @@ public class Player : MonoBehaviour {
                 images.SetGunSelected(false);
             }
             else if (player.Equals("Bunny") && myTurn != 2) {
-                GameControl.Bunny.GetComponent<Player>().TakeDamage(6);
+                ParticleSystem explosionAnimation = AnimateExplosion(player);
+                GameControl.Bunny.GetComponent<Player>().TakeDamage(6, explosionAnimation);
                 equipment.DeleteGun();
                 equipment.setGunAmount(equipment.getGunsCount());
                 isWeaponChosen = false;
@@ -258,7 +316,8 @@ public class Player : MonoBehaviour {
                 images.SetGunSelected(false);
             }
             else if (player.Equals("Duck") && myTurn != 3) {
-                GameControl.Duck.GetComponent<Player>().TakeDamage(6);
+                ParticleSystem explosionAnimation = AnimateExplosion(player);
+                GameControl.Duck.GetComponent<Player>().TakeDamage(6, explosionAnimation);
                 equipment.DeleteGun();
                 equipment.setGunAmount(equipment.getGunsCount());
                 isWeaponChosen = false;
@@ -267,7 +326,8 @@ public class Player : MonoBehaviour {
                 images.SetGunSelected(false);
             }
             else if (player.Equals("Chicken") && myTurn != 4) {
-                GameControl.Chicken.GetComponent<Player>().TakeDamage(6);
+                ParticleSystem explosionAnimation = AnimateExplosion(player);
+                GameControl.Chicken.GetComponent<Player>().TakeDamage(6, explosionAnimation);
                 equipment.DeleteGun();
                 equipment.setGunAmount(equipment.getGunsCount());
                 isWeaponChosen = false;
@@ -285,6 +345,7 @@ public class Player : MonoBehaviour {
                 weaponChosen = NONE;
                 attackDone = true;
                 images.SetMedKitSelected(false);
+                AnimateHealing(player);
             }
             else if (player.Equals("Bunny")) {
                 GameControl.Bunny.GetComponent<Player>().GiveHealth(5);
@@ -294,6 +355,7 @@ public class Player : MonoBehaviour {
                 weaponChosen = NONE;
                 attackDone = true;
                 images.SetMedKitSelected(false);
+                AnimateHealing(player);
             }
             else if (player.Equals("Duck")) {
                 GameControl.Duck.GetComponent<Player>().GiveHealth(5);
@@ -303,6 +365,7 @@ public class Player : MonoBehaviour {
                 weaponChosen = NONE;
                 attackDone = true;
                 images.SetMedKitSelected(false);
+                AnimateHealing(player);
             }
             else if (player.Equals("Chicken")) {
                 GameControl.Chicken.GetComponent<Player>().GiveHealth(5);
@@ -312,6 +375,7 @@ public class Player : MonoBehaviour {
                 weaponChosen = NONE;
                 attackDone = true;
                 images.SetMedKitSelected(false);
+                AnimateHealing(player);
             }
         }
     }

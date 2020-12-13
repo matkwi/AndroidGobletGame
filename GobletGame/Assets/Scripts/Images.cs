@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Images : MonoBehaviour {
     
-    [SerializeField] private GameObject Bomb;
+    [SerializeField] public GameObject Bomb;
     [SerializeField] private GameObject BombSelected;
-    [SerializeField] private GameObject Gun;
+    [SerializeField] public GameObject Gun;
     [SerializeField] private GameObject GunSelected;
-    [SerializeField] private GameObject MedKit;
+    [SerializeField] public GameObject MedKit;
     [SerializeField] private GameObject MedKitSelected;
+    [SerializeField] public GameObject Key;
 
     public void SetBombSelected(bool x) {
         Bomb.SetActive(!x);
@@ -25,5 +26,5 @@ public class Images : MonoBehaviour {
         MedKit.SetActive(!x);
         MedKitSelected.SetActive(x);
     }
-    
+
 }

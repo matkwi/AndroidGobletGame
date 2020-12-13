@@ -21,8 +21,8 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 850
-  m_MinSize: {x: 878, y: 300}
-  m_MaxSize: {x: 10051, y: 8000}
+  m_MinSize: {x: 879, y: 321}
+  m_MaxSize: {x: 10052, y: 8021}
   vertical: 0
   controlID: -1
 --- !u!114 &2
@@ -72,8 +72,8 @@ MonoBehaviour:
     y: 0
     width: 888
     height: 850
-  m_MinSize: {x: 602, y: 300}
-  m_MaxSize: {x: 6050, y: 8000}
+  m_MinSize: {x: 603, y: 321}
+  m_MaxSize: {x: 6051, y: 8021}
   vertical: 1
   controlID: -1
 --- !u!114 &4
@@ -97,8 +97,8 @@ MonoBehaviour:
     y: 0
     width: 888
     height: 532
-  m_MinSize: {x: 602, y: 200}
-  m_MaxSize: {x: 6050, y: 4000}
+  m_MinSize: {x: 603, y: 221}
+  m_MaxSize: {x: 6051, y: 4021}
   vertical: 0
   controlID: -1
 --- !u!114 &5
@@ -120,8 +120,8 @@ MonoBehaviour:
     y: 0
     width: 207
     height: 532
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -155,10 +155,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 5cfbffff
+      scrollPos: {x: 0, y: 80}
+      m_SelectedIDs: e0a6ffff
+      m_LastClickedID: -22816
+      m_ExpandedIDs: fae2ffff5ae3ffff30ecffff5cfbffff023900002a3a0000603b0000f63b0000043c0000be3c0000ec3c0000203d0000043e0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -246,9 +246,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.9144178, y: -2.1070936, z: -33.181118}
+    m_Target: {x: 3.564516, y: -0.3335531, z: -37.96811}
     speed: 2
-    m_Value: {x: 0.9144178, y: -2.1070936, z: -33.181118}
+    m_Value: {x: 3.564516, y: -0.3335531, z: -37.96811}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -298,9 +298,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.942717
+    m_Target: 9.654388
     speed: 2
-    m_Value: 9.942717
+    m_Value: 9.654388
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -483,20 +483,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/ParticleExplosion/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 90
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/ParticleExplosion/Prefabs
   m_LastFoldersGridSize: 90
   m_LastProjectPath: /Users/matkwi/github/AndroidGobletGame/GobletGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 12460000
-    m_LastClickedID: 17938
-    m_ExpandedIDs: 000000002c4600002e46000030460000324600003446000036460000384600003a460000
+    scrollPos: {x: 0, y: 15}
+    m_SelectedIDs: 1ace0000
+    m_LastClickedID: 52762
+    m_ExpandedIDs: 00000000624500006445000066450000684500006a4500006c4500006e4500001eb5000018ce000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -524,7 +524,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c4600002e46000030460000324600003446000036460000384600003a460000
+    m_ExpandedIDs: 00000000624500006445000066450000684500006a4500006c4500006e450000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -549,10 +549,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 84f8ffff
-    m_LastClickedInstanceID: -1916
+    m_SelectedInstanceIDs: e0a6ffff
+    m_LastClickedInstanceID: -22816
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c62300006e3d0000783c000090670000
+    m_ExpandedInstanceIDs: c62300006e3d0000783c000090670000b43e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
