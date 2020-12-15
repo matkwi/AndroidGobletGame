@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour {
-
-    //private static GameObject whoWinsTextShadow, player1MoveText, player2MoveText;
-
+    
     public static Player Bat, Bunny, Duck, Chicken;
-    private bool AIBat = false, AIBunny = false, AIDuck = false, AIChicken = false;
-    public static bool isBatPlaying = true, isBunnyPlaying = true, isDuckPlaying = true, isChickenPlaying = true;
+    private bool AIBat, AIBunny, AIDuck, AIChicken;
+    public static bool isBatPlaying, isBunnyPlaying, isDuckPlaying, isChickenPlaying;
     
     public static List<string> charactersPlaying = new List<string>();
     
@@ -21,11 +21,9 @@ public class GameControl : MonoBehaviour {
     // Use this for initialization
     void Start () {
         
+        LoadPreSettings();
+        
         images = GameObject.Find("Images").GetComponent<Images>();
-
-        //whoWinsTextShadow = GameObject.Find("WhoWinsText");
-        //player1MoveText = GameObject.Find("Player1MoveText");
-        //player2MoveText = GameObject.Find("Player2MoveText");
 
         if (isBatPlaying) {
             Bat = GameObject.Find("Bat").GetComponent<Player>();
@@ -74,10 +72,21 @@ public class GameControl : MonoBehaviour {
             Chicken.moveAllowed = false;
             Chicken.myTurn = 4;
         }
+    }
 
-        //whoWinsTextShadow.gameObject.SetActive(false);
-        //player1MoveText.gameObject.SetActive(true);
-        //player2MoveText.gameObject.SetActive(false);
+    private void LoadPreSettings() {
+        
+        PreSettings preSettings = new PreSettings();
+
+        isBatPlaying = preSettings.IsBatPlaying;
+        isBunnyPlaying = preSettings.IsBunnyPlaying;
+        isDuckPlaying = preSettings.IsDuckPlaying;
+        isChickenPlaying = preSettings.IsChickenPlaying;
+        
+        AIBat = preSettings.IsAIBat;
+        AIBunny = preSettings.IsAIBunny;
+        AIDuck = preSettings.IsAIDuck;
+        AIChicken = preSettings.IsAIChicken;
     }
 
     // Update is called once per frame
@@ -96,14 +105,9 @@ public class GameControl : MonoBehaviour {
                     else if(isDuckPlaying) Duck.refreshEq = true;
                     else if(isChickenPlaying) Chicken.refreshEq = true;
                 }
-
-                //player1MoveText.gameObject.SetActive(false);
-                //player2MoveText.gameObject.SetActive(true);
             }
             
             if (Bat.waypointIndex == Bat.waypoints.Length) {
-                //whoWinsTextShadow.gameObject.SetActive(true);
-                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
                 gameOver = true;
             }
         }
@@ -121,14 +125,9 @@ public class GameControl : MonoBehaviour {
                     else if (isChickenPlaying) Chicken.refreshEq = true;
                     else if (isBatPlaying) Bat.refreshEq = true;
                 }
-
-                //player1MoveText.gameObject.SetActive(false);
-                //player2MoveText.gameObject.SetActive(true);
             }
             
             if (Bunny.waypointIndex == Bunny.waypoints.Length) {
-                //whoWinsTextShadow.gameObject.SetActive(true);
-                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
                 gameOver = true;
             }
         }
@@ -146,14 +145,9 @@ public class GameControl : MonoBehaviour {
                     else if (isBatPlaying) Bat.refreshEq = true;
                     else if (isBunnyPlaying) Bunny.refreshEq = true;
                 }
-
-                //player1MoveText.gameObject.SetActive(false);
-                //player2MoveText.gameObject.SetActive(true);
             }
             
             if (Duck.waypointIndex == Duck.waypoints.Length) {
-                //whoWinsTextShadow.gameObject.SetActive(true);
-                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
                 gameOver = true;
             }
         }
@@ -171,14 +165,9 @@ public class GameControl : MonoBehaviour {
                     else if (isBunnyPlaying) Bunny.refreshEq = true;
                     else if (isDuckPlaying) Duck.refreshEq = true;
                 }
-
-                //player1MoveText.gameObject.SetActive(false);
-                //player2MoveText.gameObject.SetActive(true);
             }
             
             if (Chicken.waypointIndex == Chicken.waypoints.Length) {
-                //whoWinsTextShadow.gameObject.SetActive(true);
-                //whoWinsTextShadow.GetComponent<Text>().text = "Player 1 Wins";
                 gameOver = true;
             }
         }

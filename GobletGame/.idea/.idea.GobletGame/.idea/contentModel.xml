@@ -4,18 +4,24 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="JsonDotNet" t="Include">
+          <e p="link.xml" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="Animation.cs" t="Include" />
           <e p="CameraMovementScript.cs" t="Include" />
           <e p="CameraRestrictions.cs" t="Include" />
           <e p="Chest.cs" t="Include" />
+          <e p="CreateGameButtons.cs" t="Include" />
           <e p="Dice.cs" t="Include" />
           <e p="Equipment.cs" t="Include" />
           <e p="GameControl.cs" t="Include" />
           <e p="HealthBar.cs" t="Include" />
           <e p="Images.cs" t="Include" />
           <e p="Item.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
           <e p="Player.cs" t="Include" />
+          <e p="PreSettings.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
           <e p="Sounds.cs" t="Include" />
         </e>
