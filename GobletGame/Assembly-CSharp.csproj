@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\AboutButtons.cs" />
      <Compile Include="Assets\Scripts\Animation.cs" />
      <Compile Include="Assets\Scripts\CameraMovementScript.cs" />
      <Compile Include="Assets\Scripts\CameraRestrictions.cs" />
@@ -66,7 +67,9 @@
      <Compile Include="Assets\Scripts\Dice.cs" />
      <Compile Include="Assets\Scripts\Equipment.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
+     <Compile Include="Assets\Scripts\HTPImages.cs" />
      <Compile Include="Assets\Scripts\HealthBar.cs" />
+     <Compile Include="Assets\Scripts\HowToPlayButtons.cs" />
      <Compile Include="Assets\Scripts\Images.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />

@@ -8,6 +8,7 @@
           <e p="link.xml" t="Include" />
         </e>
         <e p="Scripts" t="Include">
+          <e p="AboutButtons.cs" t="Include" />
           <e p="Animation.cs" t="Include" />
           <e p="CameraMovementScript.cs" t="Include" />
           <e p="CameraRestrictions.cs" t="Include" />
@@ -17,6 +18,8 @@
           <e p="Equipment.cs" t="Include" />
           <e p="GameControl.cs" t="Include" />
           <e p="HealthBar.cs" t="Include" />
+          <e p="HowToPlayButtons.cs" t="Include" />
+          <e p="HTPImages.cs" t="Include" />
           <e p="Images.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />

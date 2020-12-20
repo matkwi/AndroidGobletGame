@@ -121,18 +121,28 @@ public class Player : MonoBehaviour {
                 else if (equipment.getGunsCount() > 0) {
                     chooseWeapon(GUN);
                     Random random = new Random();
-                    List<string> characters = GameControl.charactersPlaying;
+                    List<string> characters = new List<string>();
+                    foreach (string c in GameControl.charactersPlaying) {
+                        characters.Add(c);
+                    }
                     characters.Remove(gameObject.name);
                     int x = random.Next(0, characters.Count);
-                    if (isWeaponChosen) Attack(characters[x]);
+                    if (isWeaponChosen) {
+                        Attack(characters[x]);
+                    }
                 }
                 else if (equipment.getBombsCount() > 0) {
                     chooseWeapon(BOMB);
                     Random random = new Random();
-                    List<string> characters = GameControl.charactersPlaying;
+                    List<string> characters = new List<string>();
+                    foreach (string c in GameControl.charactersPlaying) {
+                        characters.Add(c);
+                    }
                     characters.Remove(gameObject.name);
                     int x = random.Next(0, characters.Count);
-                    if (isWeaponChosen) Attack(characters[x]);
+                    if (isWeaponChosen) {
+                        Attack(characters[x]);
+                    }
                 }
             }
 

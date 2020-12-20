@@ -1,4 +1,0 @@
-#Tue Dec 15 01:08:45 CET 2020
-base.0=/Users/matkwi/github/AndroidGobletGame/GobletGame/Temp/gradleOut/launcher/build/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex

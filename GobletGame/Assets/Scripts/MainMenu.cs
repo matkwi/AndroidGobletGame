@@ -11,4 +11,16 @@ public class MainMenu : MonoBehaviour {
     public void CreateGame() {
         SceneManager.LoadScene("Scenes/CreateNewGame");
     }
+
+    public void HowToPlay() {
+        SceneManager.LoadScene("Scenes/HowToPlay");
+    }
+    
+    public void About() {
+        SceneManager.LoadScene("Scenes/About");
+    }
+
+    public void Exit() {
+        Application.Quit();
+    }
 }
