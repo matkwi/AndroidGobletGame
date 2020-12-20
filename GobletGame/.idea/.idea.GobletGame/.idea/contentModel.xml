@@ -21,6 +21,7 @@
           <e p="HowToPlayButtons.cs" t="Include" />
           <e p="HTPImages.cs" t="Include" />
           <e p="Images.cs" t="Include" />
+          <e p="InGameButtons.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="Player.cs" t="Include" />

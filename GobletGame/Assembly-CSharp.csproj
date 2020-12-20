@@ -71,6 +71,7 @@
      <Compile Include="Assets\Scripts\HealthBar.cs" />
      <Compile Include="Assets\Scripts\HowToPlayButtons.cs" />
      <Compile Include="Assets\Scripts\Images.cs" />
+     <Compile Include="Assets\Scripts\InGameButtons.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
