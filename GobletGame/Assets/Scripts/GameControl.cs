@@ -2,27 +2,35 @@
 using System.IO;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameControl : MonoBehaviour {
     
     public static Player Bat, Bunny, Duck, Chicken;
+
     private bool AIBat, AIBunny, AIDuck, AIChicken;
     public static bool isBatPlaying, isBunnyPlaying, isDuckPlaying, isChickenPlaying;
     
+    public static List<bool> whoIsPlaying = new List<bool>();
+
     public static List<string> charactersPlaying = new List<string>();
     
     public static int diceSideThrown = 10;
 
-    public static bool gameOver = false;
+    public static bool GameOver;
     
     private Images images;
 
     // Use this for initialization
     void Start () {
-        
+
         LoadPreSettings();
         
+        charactersPlaying.Clear();
+
+        GameOver = false;
+
         images = GameObject.Find("Images").GetComponent<Images>();
 
         if (isBatPlaying) {
@@ -72,6 +80,11 @@ public class GameControl : MonoBehaviour {
             Chicken.moveAllowed = false;
             Chicken.myTurn = 4;
         }
+
+        if (isChickenPlaying) Dice.whosTurn = 4;
+        if (isDuckPlaying) Dice.whosTurn = 3;
+        if (isBunnyPlaying) Dice.whosTurn = 2;
+        if (isBatPlaying) Dice.whosTurn = 1;
     }
 
     private void LoadPreSettings() {
@@ -87,6 +100,13 @@ public class GameControl : MonoBehaviour {
         AIBunny = preSettings.IsAIBunny;
         AIDuck = preSettings.IsAIDuck;
         AIChicken = preSettings.IsAIChicken;
+        
+        whoIsPlaying.Clear();
+        whoIsPlaying.Add(false);
+        whoIsPlaying.Add(preSettings.IsBatPlaying);
+        whoIsPlaying.Add(preSettings.IsBunnyPlaying);
+        whoIsPlaying.Add(preSettings.IsDuckPlaying);
+        whoIsPlaying.Add(preSettings.IsChickenPlaying);
     }
 
     // Update is called once per frame
@@ -98,17 +118,21 @@ public class GameControl : MonoBehaviour {
                     Bat.iterator = 0;
                     Bat.moveAllowed = false;
                     Dice.playerIsMoving = false;
-                    images.SetWhosTurnImage(Dice.whosTurn);
                     Bat.DiceRolled = false;
-                    
-                    if(isBunnyPlaying) Bunny.refreshEq = true;
-                    else if(isDuckPlaying) Duck.refreshEq = true;
-                    else if(isChickenPlaying) Chicken.refreshEq = true;
+
+                    if (isBunnyPlaying) {
+                        images.SetWhosTurnImage("Bunny");
+                        Bunny.refreshEq = true;
+                    }
+                    else if (isDuckPlaying) {
+                        images.SetWhosTurnImage("Duck");
+                        Duck.refreshEq = true;
+                    }
+                    else if (isChickenPlaying) {
+                        images.SetWhosTurnImage("Chicken");
+                        Chicken.refreshEq = true;
+                    }
                 }
-            }
-            
-            if (Bat.waypointIndex == Bat.waypoints.Length) {
-                gameOver = true;
             }
         }
         
@@ -118,17 +142,21 @@ public class GameControl : MonoBehaviour {
                     Bunny.iterator = 0;
                     Bunny.moveAllowed = false;
                     Dice.playerIsMoving = false;
-                    images.SetWhosTurnImage(Dice.whosTurn);
                     Bunny.DiceRolled = false;
 
-                    if (isDuckPlaying) Duck.refreshEq = true;
-                    else if (isChickenPlaying) Chicken.refreshEq = true;
-                    else if (isBatPlaying) Bat.refreshEq = true;
+                    if (isDuckPlaying) {
+                        images.SetWhosTurnImage("Duck");
+                        Duck.refreshEq = true;
+                    }
+                    else if (isChickenPlaying) {
+                        images.SetWhosTurnImage("Chicken");
+                        Chicken.refreshEq = true;
+                    }
+                    else if (isBatPlaying) {
+                        images.SetWhosTurnImage("Bat");
+                        Bat.refreshEq = true;
+                    }
                 }
-            }
-            
-            if (Bunny.waypointIndex == Bunny.waypoints.Length) {
-                gameOver = true;
             }
         }
         
@@ -138,17 +166,21 @@ public class GameControl : MonoBehaviour {
                     Duck.iterator = 0;
                     Duck.moveAllowed = false;
                     Dice.playerIsMoving = false;
-                    images.SetWhosTurnImage(Dice.whosTurn);
                     Duck.DiceRolled = false;
 
-                    if (isChickenPlaying) Chicken.refreshEq = true;
-                    else if (isBatPlaying) Bat.refreshEq = true;
-                    else if (isBunnyPlaying) Bunny.refreshEq = true;
+                    if (isChickenPlaying) {
+                        images.SetWhosTurnImage("Chicken");
+                        Chicken.refreshEq = true;
+                    }
+                    else if (isBatPlaying) {
+                        images.SetWhosTurnImage("Bat");
+                        Bat.refreshEq = true;
+                    }
+                    else if (isBunnyPlaying) {
+                        images.SetWhosTurnImage("Bunny");
+                        Bunny.refreshEq = true;
+                    }
                 }
-            }
-            
-            if (Duck.waypointIndex == Duck.waypoints.Length) {
-                gameOver = true;
             }
         }
         
@@ -158,18 +190,26 @@ public class GameControl : MonoBehaviour {
                     Chicken.iterator = 0;
                     Chicken.moveAllowed = false;
                     Dice.playerIsMoving = false;
-                    images.SetWhosTurnImage(Dice.whosTurn);
                     Chicken.DiceRolled = false;
 
-                    if (isBatPlaying) Bat.refreshEq = true;
-                    else if (isBunnyPlaying) Bunny.refreshEq = true;
-                    else if (isDuckPlaying) Duck.refreshEq = true;
+                    if (isBatPlaying) {
+                        images.SetWhosTurnImage("Bat");
+                        Bat.refreshEq = true;
+                    }
+                    else if (isBunnyPlaying) {
+                        images.SetWhosTurnImage("Bunny");
+                        Bunny.refreshEq = true;
+                    }
+                    else if (isDuckPlaying) {
+                        images.SetWhosTurnImage("Duck");
+                        Duck.refreshEq = true;
+                    }
                 }
             }
-            
-            if (Chicken.waypointIndex == Chicken.waypoints.Length) {
-                gameOver = true;
-            }
+        }
+        
+        if (GameOver) {
+            SceneManager.LoadScene("Scenes/WinnerScene");
         }
     }
 

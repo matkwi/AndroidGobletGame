@@ -1,27 +1,34 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class SoundManager {
-    
-    static Sounds sounds = GameObject.Find("Sounds").GetComponent<Sounds>();
-    private static GameObject soundGameObject = new GameObject("Sound");
-    public static void PlayBombSound() {
+public class SoundManager : MonoBehaviour {
+
+    private Sounds sounds;
+    private GameObject soundGameObject;
+
+    private void Start() {
+        sounds = GameObject.Find("Sounds").GetComponent<Sounds>();
+        soundGameObject = new GameObject("Sound");
+    }
+
+    public void PlayBombSound() {
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.PlayOneShot(sounds.bombSound);
     }
     
-    public static void PlayGunSound() {
+    public void PlayGunSound() {
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.PlayOneShot(sounds.gunSound);
     }
     
-    public static void PlayMedKitSound() {
+    public void PlayMedKitSound() {
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.PlayOneShot(sounds.medKitSound);
     }
     
-    public static void PlayCollectSound() {
+    public void PlayCollectSound() {
         AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
         audioSource.PlayOneShot(sounds.collectSound);
     }

@@ -59,7 +59,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\AboutButtons.cs" />
-     <Compile Include="Assets\Scripts\Animation.cs" />
      <Compile Include="Assets\Scripts\CameraMovementScript.cs" />
      <Compile Include="Assets\Scripts\CameraRestrictions.cs" />
      <Compile Include="Assets\Scripts\Chest.cs" />
@@ -78,6 +77,9 @@
      <Compile Include="Assets\Scripts\PreSettings.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Sounds.cs" />
+     <Compile Include="Assets\Scripts\WhoWon.cs" />
+     <Compile Include="Assets\Scripts\WinnerButtons.cs" />
+     <Compile Include="Assets\Scripts\WinnerImages.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

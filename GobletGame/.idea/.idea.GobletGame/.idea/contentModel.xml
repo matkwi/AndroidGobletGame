@@ -9,7 +9,6 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AboutButtons.cs" t="Include" />
-          <e p="Animation.cs" t="Include" />
           <e p="CameraMovementScript.cs" t="Include" />
           <e p="CameraRestrictions.cs" t="Include" />
           <e p="Chest.cs" t="Include" />
@@ -28,6 +27,9 @@
           <e p="PreSettings.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
           <e p="Sounds.cs" t="Include" />
+          <e p="WhoWon.cs" t="Include" />
+          <e p="WinnerButtons.cs" t="Include" />
+          <e p="WinnerImages.cs" t="Include" />
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">

@@ -33,37 +33,43 @@ public class Player : MonoBehaviour {
 
     [HideInInspector]
     public int maxHealth = 10;
+    
     [HideInInspector]
     public int currentHealth;
 
     public HealthBar healthBar;
     private Equipment equipment;
+    
     [HideInInspector]
     public bool refreshEq = false;
+    
     [HideInInspector]
     public int myTurn;
-    private bool isWeaponChosen = false;
+
+    private bool isWeaponChosen;
     private string weaponChosen = "";
-    private string BOMB = "Bomb";
-    private string GUN = "Gun";
-    private string MEDKIT = "MedKit";
-    private string KEY = "Key";
-    private string NONE = "";
-    private static bool attackDone = false;
+    private const string BOMB = "Bomb";
+    private const string GUN = "Gun";
+    private const string MEDKIT = "MedKit";
+    private const string KEY = "Key";
+    private const string NONE = "";
+    private static bool attackDone;
     private bool stopForChest;
-    public static bool Animated;
     
     private Dice Dice;
     private Images images;
+    private SoundManager SoundManager;
 
     private TextMeshProUGUI chooseDirection;
     
     // Use this for initialization
 	private void Start () {
-        Animated = false;
         DiceRolled = false;
         stopForChest = false;
         moveAllowed = false;
+        refreshEq = false;
+        attackDone = false;
+        isWeaponChosen = false;
         waypointIndex = 0;
         iterator = 0;
         transform.position = waypoints[waypointIndex].transform.position;
@@ -73,17 +79,17 @@ public class Player : MonoBehaviour {
         equipment.AddKey(30);
         Dice = GameObject.Find("Dice").GetComponent<Dice>();
         images = GameObject.Find("Images").GetComponent<Images>();
+        SoundManager = GameObject.Find("SoundManager").GetComponent<SoundManager>();
         chooseDirection = GameObject.Find("ChooseDirection").GetComponent<TextMeshProUGUI>();
     }
 
-    private void WaitForExplosion(ParticleSystem animation)
-    {
-        StartCoroutine(PauseGame(animation));
+    private void WaitForAnimation(ParticleSystem animation, string animationType) {
+        if (animationType.Equals("explosion")) StartCoroutine(WaitForExplosion(animation));
+        else if (animationType.Equals("goblet")) StartCoroutine(WaitForChest(animation));
     }
 
-    private IEnumerator PauseGame(ParticleSystem animation) {
-        do
-        {
+    private IEnumerator WaitForExplosion(ParticleSystem animation) {
+        do {
             yield return null;
         } while ( animation.isPlaying );
         currentHealth = maxHealth;
@@ -93,6 +99,23 @@ public class Player : MonoBehaviour {
         waypointIndex = tab[x];
         transform.position = waypoints[waypointIndex].transform.position;
         healthBar.SetHealth(currentHealth);
+    }
+    
+    private IEnumerator WaitForChest(ParticleSystem animation) {
+        do {
+            yield return null;
+        } while ( animation.isPlaying );
+        equipment.DeleteKey(40);
+        equipment.AddGoblet();
+        SoundManager.PlayCollectSound();
+        Chest chest = GameObject.Find("Chest").GetComponent<Chest>();
+        chest.changePosition = true;
+        if (equipment.getGobletsCount() == 4) {
+            WhoWon whoWon = new WhoWon();
+            whoWon.Winner = gameObject.name;
+            GameControl.GameOver = true;
+        }
+        else stopForChest = false;
     }
 	
 	// Update is called once per frame
@@ -114,7 +137,7 @@ public class Player : MonoBehaviour {
 
         if (AIPlayer && myTurn == Dice.whosTurn && !DiceRolled && !Dice.playerIsMoving) {
             if (!attackDone) {
-                if (currentHealth < 7) {
+                if (currentHealth < 7 && equipment.getMedKitsCount() > 0) {
                     chooseWeapon(MEDKIT);
                     if (isWeaponChosen) Attack(gameObject.name);
                 }
@@ -154,37 +177,29 @@ public class Player : MonoBehaviour {
             Move();
     }
 
-    private void Animation(Vector3 startPoint, Vector3 endPoint, string animationObject) {
+    private void Animation(string animationObject) {
         ParticleSystem gobletAnimation = GameObject.Find(animationObject + gameObject.name).GetComponent<ParticleSystem>();
         if(!gobletAnimation.isPlaying) gobletAnimation.Play();
-        // Animation animation = GameObject.Find(animationObject).GetComponent<Animation>();
-        // animation.StartPoint = startPoint;
-        // animation.EndPoint = endPoint;
-        // animation.Animate = true;
     }
     
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Bomb") && iterator == GameControl.diceSideThrown) {
-            Vector3 endPoint = images.Bomb.transform.position;
-            Animation(transform.position, endPoint, "BombAnimation");
+            Animation("BombAnimation");
             equipment.AddBomb();
             SoundManager.PlayCollectSound();
         }
         else if (other.CompareTag("Gun") && iterator == GameControl.diceSideThrown) {
-            Vector3 endPoint = images.Gun.transform.position;
-            Animation(transform.position, endPoint, "GunAnimation");
+            Animation("GunAnimation");
             equipment.AddGun();
             SoundManager.PlayCollectSound();
         }
         else if (other.CompareTag("MedKit") && iterator == GameControl.diceSideThrown) {
-            Vector3 endPoint = images.MedKit.transform.position;
-            Animation(transform.position, endPoint, "MedKitAnimation");
+            Animation("MedKitAnimation");
             equipment.AddMedKit();
             SoundManager.PlayCollectSound();
         }
         else if (other.CompareTag("Key") && iterator == GameControl.diceSideThrown) {
-            Vector3 endPoint = images.Key.transform.position;
-            Animation(transform.position, endPoint, "KeyAnimation");
+            Animation("KeyAnimation");
             Random random = new Random();
             equipment.AddKey(random.Next(8, 13));
             SoundManager.PlayCollectSound();
@@ -192,22 +207,16 @@ public class Player : MonoBehaviour {
         else if (other.CompareTag("Chest")) {
             stopForChest = true;
             if (equipment.getKeysCount() >= 40) {
-                Vector3 endPoint = images.Key.transform.position;
-                Animation(transform.position, endPoint, "GobletAnimation");
-                equipment.DeleteKey(40);
-                equipment.AddGoblet();
-                SoundManager.PlayCollectSound();
-                Chest chest = GameObject.Find("Chest").GetComponent<Chest>();
-                chest.changePosition = true;
+                ParticleSystem gobletAnimation = AnimateGoblet();
+                WaitForAnimation(gobletAnimation, "goblet");
             }
-            stopForChest = false;
         }
     }
 
     private void TakeDamage(int damage, ParticleSystem animation) {
         currentHealth -= damage;
         if (currentHealth <= 0) {
-            WaitForExplosion(animation);
+            WaitForAnimation(animation, "explosion");
         }
         healthBar.SetHealth(currentHealth);
     }
@@ -269,6 +278,12 @@ public class Player : MonoBehaviour {
     private void AnimateHealing(string player) {
         ParticleSystem healingAnimation = GameObject.Find("HealingAnimation" + player).GetComponent<ParticleSystem>();
         if(!healingAnimation.isPlaying) healingAnimation.Play();
+    }
+    
+    private ParticleSystem AnimateGoblet() {
+        ParticleSystem gobletAnimation = GameObject.Find("GobletAnimation" + gameObject.name).GetComponent<ParticleSystem>();
+        if(!gobletAnimation.isPlaying) gobletAnimation.Play();
+        return gobletAnimation;
     }
 
     private void Attack(string player) {

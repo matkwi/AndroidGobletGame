@@ -24,13 +24,22 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GobletGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GobletGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Images.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Images.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b7a0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b7a0-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/d69a67-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/d69a67-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,19 +69,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Chest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KeyAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animation.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Images.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dice.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sounds.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PreSettings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CreateGameButtons.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HTPImages.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HowToPlayButtons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AboutButtons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/InGameButtons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WhoWon.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WinnerImages.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Images.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WinnerButtons.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dice.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
       </list>
     </option>
   </component>
@@ -146,7 +158,7 @@
       <workItem from="1607969356403" duration="13727000" />
       <workItem from="1608325876734" duration="1574000" />
       <workItem from="1608330884298" duration="48000" />
-      <workItem from="1608484129479" duration="7043000" />
+      <workItem from="1608484129479" duration="23635000" />
     </task>
     <servers />
   </component>
@@ -239,10 +251,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="0" y="25" width="1440" height="797" key="LayersDialog/0.0.1440.900@0.0.1440.900" timestamp="1605479445193" />
-    <state x="499" y="127" key="RiderGenerateDialog" timestamp="1607989411990">
+    <state x="499" y="127" key="RiderGenerateDialog" timestamp="1608671557759">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="499" y="127" key="RiderGenerateDialog/0.0.1440.900@0.0.1440.900" timestamp="1607989411990" />
+    <state x="499" y="127" key="RiderGenerateDialog/0.0.1440.900@0.0.1440.900" timestamp="1608671557759" />
     <state x="221" y="89" key="SettingsEditor" timestamp="1605479837600">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -251,6 +263,10 @@
       <screen x="0" y="25" width="1440" height="802" />
     </state>
     <state x="0" y="28" width="1440" height="872" key="VCS.FileHistoryDialog/0.25.1440.802@0.25.1440.802" timestamp="1607980761293" />
+    <state x="380" y="82" width="680" height="735" key="find.popup" timestamp="1608667213322">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="380" y="82" width="680" height="735" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1608667213322" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1603984121177">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

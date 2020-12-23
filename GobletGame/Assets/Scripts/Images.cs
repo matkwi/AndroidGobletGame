@@ -31,27 +31,27 @@ public class Images : MonoBehaviour {
         MedKitSelected.SetActive(x);
     }
 
-    public void SetWhosTurnImage(int x) {
+    public void SetWhosTurnImage(string x) {
         switch (x) {
-            case 1:
+            case "Bat":
                 Bat.SetActive(true);
                 Bunny.SetActive(false);
                 Duck.SetActive(false);
                 Chicken.SetActive(false);
                 break;
-            case 2:
+            case "Bunny":
                 Bat.SetActive(false);
                 Bunny.SetActive(true);
                 Duck.SetActive(false);
                 Chicken.SetActive(false);
                 break;
-            case 3:
+            case "Duck":
                 Bat.SetActive(false);
                 Bunny.SetActive(false);
                 Duck.SetActive(true);
                 Chicken.SetActive(false);
                 break;
-            case 4:
+            case "Chicken":
                 Bat.SetActive(false);
                 Bunny.SetActive(false);
                 Duck.SetActive(false);
