@@ -23,24 +23,423 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GobletGame/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GobletGame/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GobletGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GobletGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/Example.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/Example/Example.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/Example/Example.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-beach-cloud-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-beach-cloud-01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-beach-cloud-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-beach-cloud-03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-beach-mountain-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-beach-mountain-01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-beach-sky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-beach-sky.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-sea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-sea.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-wave-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/night-backgrounds/night-wave-01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-beach-cloud-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-beach-cloud-01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-beach-cloud-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-beach-cloud-03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-beach-mountain-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-beach-mountain-01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-beach-sky.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-beach-sky.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-sea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-sea.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-wave-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Free 2D Adventure Beach Pack/sunset-backgrounds/sunset-wave-01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeButtonSet/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeButtonSet/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/FreeButtonSet/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Backward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Backward.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Cancel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Cancel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Dollar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Dollar.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/DownArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/DownArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Email.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Email.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Facebook.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Forward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Forward.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Gamecenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Gamecenter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/GooglePlus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/GooglePlus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Home.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Info.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/LeftArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/LeftArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/LeftArrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/LeftArrow2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Menu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Minus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Pause.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Play.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Plus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/QuestionMark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/QuestionMark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Restart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Restart.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/RightArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/RightArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/RightArrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/RightArrow2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Settings.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Shop.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/SoundOFF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/SoundOFF.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/SoundON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/SoundON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Star.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Trophy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Trophy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/Twitter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/UpArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/PNG/UpArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/Sprites/LazyDayBG-resized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/Sprites/LazyDayBG-resized.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/Vector.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/Vector/LazyDay.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/LazyDay/Vector/LazyDay.ai.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Backward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Backward.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Cancel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Cancel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Dollar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Dollar.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/DownArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/DownArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Email.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Email.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Facebook.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Forward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Forward.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/GameCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/GameCenter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/GooglePlus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/GooglePlus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Home.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Info.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/LeftArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/LeftArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/LeftArrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/LeftArrow2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Menu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Minus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Pause.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Play.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Plus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/QuestionMark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/QuestionMark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Restart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Restart.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/RightArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/RightArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/RightArrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/RightArrow2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Setting.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Setting.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Shop.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/SoundOFF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/SoundOFF.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/SoundON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/SoundON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Star.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Trophy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Trophy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Twitter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/UpArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/UpArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Yes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/PNG/Yes.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/Sprites/PlayfulBG-resized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/Sprites/PlayfulBG-resized.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/Vector.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/Vector/Playful.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Playful/Vector/Playful.ai.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PreviewScenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PreviewScenes/LazyDayPreview.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PreviewScenes/LazyDayPreview.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PreviewScenes/PlayfulPreview.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PreviewScenes/PlayfulPreview.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PreviewScenes/PurpleRockPreview.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PreviewScenes/PurpleRockPreview.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PreviewScenes/WoodenBlocksPreview.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PreviewScenes/WoodenBlocksPreview.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Backward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Backward.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Cancel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Cancel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Dollar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Dollar.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/DownArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/DownArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Email.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Email.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Facebook.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Forward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Forward.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Gamecenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Gamecenter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/GooglePlus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/GooglePlus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Home.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Info.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/LeftArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/LeftArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/LeftArrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/LeftArrow2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Menu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Minus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Pause.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Play.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Plus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/QuestionMark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/QuestionMark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Restart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Restart.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/RightArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/RightArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/RightArrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/RightArrow2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Settings.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Shop.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/SoundOFF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/SoundOFF.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/SoundON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/SoundON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Star.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Trophy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Trophy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Twitter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/UpArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/UpArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Yes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/PNG/Yes.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/Sprites/PurpleRockBG-resized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/Sprites/PurpleRockBG-resized.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/Vector.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/Vector/PurpleRock.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/PurpleRock/Vector/PurpleRock.ai.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Readme.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Readme/Readme.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/Readme/Readme.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Backward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Backward.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Cancel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Cancel.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Dollar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Dollar.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/DownArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/DownArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Email.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Email.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Facebook.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Facebook.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Forward.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Forward.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/GameCenter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/GameCenter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/GooglePlus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/GooglePlus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Home.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Home.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Info.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Info.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/LeftArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/LeftArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/LeftArrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/LeftArrow2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Menu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Menu.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Minus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Minus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Pause.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Pause.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Play.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Plus.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Plus.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/QuestionMark.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/QuestionMark.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Restart.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Restart.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/RightArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/RightArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/RightArrow2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/RightArrow2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Settings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Settings.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Shop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Shop.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/SoundOFF.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/SoundOFF.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/SoundON.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/SoundON.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Star.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Star.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Trophy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Trophy.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Twitter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/UpArrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/UpArrow.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Yes.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/PNG/Yes.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/Sprites/WoodenBG-resized.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/Sprites/WoodenBG-resized.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/Vector.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/Vector/Vector Files.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/Vector/Vector Files/WoodenBlocks.ai" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game GUI Vol1/WoodenBlocks/Vector/Vector Files/WoodenBlocks.ai.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game_music/With love from Vertex Studio (34).mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game_music/With love from Vertex Studio (34).mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game_music/With love from Vertex Studio (37).mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game_music/With love from Vertex Studio (37).mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Animation.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraMovementScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraMovementScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Chest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Chest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CreateGameButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CreateGameButtons.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dice.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Equipment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Equipment.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControl.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HTPImages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HTPImages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HowToPlayButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HowToPlayButtons.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Images.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Images.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InGameButtons.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InGameButtons.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PreSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PreSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WhoWon.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WhoWon.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WinnerImages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WinnerImages.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastBuild.buildreport" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.Animation.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.Animation.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.Animation.Triangle.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.Animation.Triangle.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.Common.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.Common.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.PixelPerfect.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.PixelPerfect.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.SpriteShape.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.2D.SpriteShape.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.InternalAPIEngineBridge.001.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.InternalAPIEngineBridge.001.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.Mathematics.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.Mathematics.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.Timeline.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/Unity.Timeline.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/Managed/UnityEngine.UI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/globalgamemanagers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/globalgamemanagers.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/globalgamemanagers.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/level0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/level1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/level2" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/level2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/resources.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/resources.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/resources.assets.resS" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/sharedassets0.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/sharedassets1.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/sharedassets2.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/sharedassets2.assets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/sharedassets2.assets.resS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/Data/sharedassets2.resource" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/ScriptsOnlyCache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/iOS/ScriptsOnlyCache.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/PsdPlugin.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/PsdPlugin.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Animation.Triangle.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Path.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.PixelPerfect.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.PixelPerfect.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Psdimporter.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.SpriteShape.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.SpriteShape.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Mathematics.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Mathematics.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Rider.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Rider.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.TextMeshPro.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Timeline.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Timeline.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Timeline.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Timeline.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.VSCode.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.VSCode.Editor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/UnityEditor.TestRunner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/UnityEditor.TestRunner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/UnityEditor.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/UnityEditor.UI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/UnityEngine.TestRunner.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/UnityEngine.TestRunner.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/UnityEngine.UI.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b7a0-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b7a0-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/d69a67-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/d69a67-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler3.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler4.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler4.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler5.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler5.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler6.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler6.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler7.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler7.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,9 +463,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EquipmentUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowThePath.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HealthBar.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Equipment.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Chest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/KeyAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Animation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Sounds.cs" />
@@ -82,9 +478,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Images.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WinnerButtons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SoundManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dice.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameControl.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Equipment.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Chest.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MusicClass.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dice.cs" />
       </list>
     </option>
   </component>
@@ -119,10 +519,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="2595">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="2595" />
+      <option name="pid" />
       <option name="selectedOptions">
         <set />
       </option>
@@ -158,7 +558,9 @@
       <workItem from="1607969356403" duration="13727000" />
       <workItem from="1608325876734" duration="1574000" />
       <workItem from="1608330884298" duration="48000" />
-      <workItem from="1608484129479" duration="23635000" />
+      <workItem from="1608484129479" duration="24237000" />
+      <workItem from="1608757932743" duration="1238000" />
+      <workItem from="1608759712185" duration="3943000" />
     </task>
     <servers />
   </component>

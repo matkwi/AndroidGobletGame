@@ -1,61 +1,62 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Images : MonoBehaviour {
     
-    [SerializeField] public GameObject Bomb;
-    [SerializeField] private GameObject BombSelected;
-    [SerializeField] public GameObject Gun;
-    [SerializeField] private GameObject GunSelected;
-    [SerializeField] public GameObject MedKit;
-    [SerializeField] private GameObject MedKitSelected;
-    [SerializeField] public GameObject Key;
-    [SerializeField] public GameObject Bat;
-    [SerializeField] public GameObject Bunny;
-    [SerializeField] public GameObject Duck;
-    [SerializeField] public GameObject Chicken;
+    [FormerlySerializedAs("Bomb")] [SerializeField] public GameObject bomb;
+    [FormerlySerializedAs("BombSelected")] [SerializeField] private GameObject bombSelected;
+    [FormerlySerializedAs("Gun")] [SerializeField] public GameObject gun;
+    [FormerlySerializedAs("GunSelected")] [SerializeField] private GameObject gunSelected;
+    [FormerlySerializedAs("MedKit")] [SerializeField] public GameObject medKit;
+    [FormerlySerializedAs("MedKitSelected")] [SerializeField] private GameObject medKitSelected;
+    [FormerlySerializedAs("Key")] [SerializeField] public GameObject key;
+    [FormerlySerializedAs("Bat")] [SerializeField] public GameObject bat;
+    [FormerlySerializedAs("Bunny")] [SerializeField] public GameObject bunny;
+    [FormerlySerializedAs("Duck")] [SerializeField] public GameObject duck;
+    [FormerlySerializedAs("Chicken")] [SerializeField] public GameObject chicken;
 
     public void SetBombSelected(bool x) {
-        Bomb.SetActive(!x);
-        BombSelected.SetActive(x);
+        bomb.SetActive(!x);
+        bombSelected.SetActive(x);
     }
     
     public void SetGunSelected(bool x) {
-        Gun.SetActive(!x);
-        GunSelected.SetActive(x);
+        gun.SetActive(!x);
+        gunSelected.SetActive(x);
     }
     
     public void SetMedKitSelected(bool x) {
-        MedKit.SetActive(!x);
-        MedKitSelected.SetActive(x);
+        medKit.SetActive(!x);
+        medKitSelected.SetActive(x);
     }
 
     public void SetWhosTurnImage(string x) {
         switch (x) {
             case "Bat":
-                Bat.SetActive(true);
-                Bunny.SetActive(false);
-                Duck.SetActive(false);
-                Chicken.SetActive(false);
+                bat.SetActive(true);
+                bunny.SetActive(false);
+                duck.SetActive(false);
+                chicken.SetActive(false);
                 break;
             case "Bunny":
-                Bat.SetActive(false);
-                Bunny.SetActive(true);
-                Duck.SetActive(false);
-                Chicken.SetActive(false);
+                bat.SetActive(false);
+                bunny.SetActive(true);
+                duck.SetActive(false);
+                chicken.SetActive(false);
                 break;
             case "Duck":
-                Bat.SetActive(false);
-                Bunny.SetActive(false);
-                Duck.SetActive(true);
-                Chicken.SetActive(false);
+                bat.SetActive(false);
+                bunny.SetActive(false);
+                duck.SetActive(true);
+                chicken.SetActive(false);
                 break;
             case "Chicken":
-                Bat.SetActive(false);
-                Bunny.SetActive(false);
-                Duck.SetActive(false);
-                Chicken.SetActive(true);
+                bat.SetActive(false);
+                bunny.SetActive(false);
+                duck.SetActive(false);
+                chicken.SetActive(true);
                 break;
         }
     }

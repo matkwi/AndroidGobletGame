@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WhoWon {
 
-    private static string winner;
+    private static string _winner;
 
     public WhoWon() {
         
     }
 
     public string Winner {
-        get => winner;
-        set => winner = value;
+        get => _winner;
+        set => _winner = value;
     }
 }

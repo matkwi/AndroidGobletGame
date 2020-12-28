@@ -4,56 +4,56 @@ using UnityEngine;
 
 public class PreSettings {
 
-    private static bool isBatPlaying;
-    private static bool isBunnyPlaying;
-    private static bool isDuckPlaying;
-    private static bool isChickenPlaying;
-    private static bool AIBat;
-    private static bool AIBunny;
-    private static bool AIDuck;
-    private static bool AIChicken;
+    private static bool _isBatPlaying;
+    private static bool _isBunnyPlaying;
+    private static bool _isDuckPlaying;
+    private static bool _isChickenPlaying;
+    private static bool _aiBat;
+    private static bool _aiBunny;
+    private static bool _aiDuck;
+    private static bool _aiChicken;
 
     public PreSettings() {
         
     }
 
     public bool IsBatPlaying {
-        get => isBatPlaying;
-        set => isBatPlaying = value;
+        get => _isBatPlaying;
+        set => _isBatPlaying = value;
     }
 
     public bool IsBunnyPlaying {
-        get => isBunnyPlaying;
-        set => isBunnyPlaying = value;
+        get => _isBunnyPlaying;
+        set => _isBunnyPlaying = value;
     }
 
     public bool IsDuckPlaying {
-        get => isDuckPlaying;
-        set => isDuckPlaying = value;
+        get => _isDuckPlaying;
+        set => _isDuckPlaying = value;
     }
 
     public bool IsChickenPlaying {
-        get => isChickenPlaying;
-        set => isChickenPlaying = value;
+        get => _isChickenPlaying;
+        set => _isChickenPlaying = value;
     }
 
     public bool IsAIBat {
-        get => AIBat;
-        set => AIBat = value;
+        get => _aiBat;
+        set => _aiBat = value;
     }
 
     public bool IsAIBunny {
-        get => AIBunny;
-        set => AIBunny = value;
+        get => _aiBunny;
+        set => _aiBunny = value;
     }
 
     public bool IsAIDuck {
-        get => AIDuck;
-        set => AIDuck = value;
+        get => _aiDuck;
+        set => _aiDuck = value;
     }
 
     public bool IsAIChicken {
-        get => AIChicken;
-        set => AIChicken = value;
+        get => _aiChicken;
+        set => _aiChicken = value;
     }
 }

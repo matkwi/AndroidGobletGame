@@ -7,155 +7,151 @@ using UnityEngine;
 
 public class Equipment {
 
-    private List<Item> bombs;
-    private List<Item> guns;
-    private List<Item> medKits;
-    private List<Item> keys;
-    private List<Item> goblets;
+    private List<Item> _bombs;
+    private List<Item> _guns;
+    private List<Item> _medKits;
+    private List<Item> _keys;
+    private List<Item> _goblets;
 
-    private TextMeshProUGUI bombAmount;
-    private TextMeshProUGUI gunAmount;
-    private TextMeshProUGUI medkitAmount;
-    private TextMeshProUGUI keyAmount;
-    private TextMeshProUGUI gobletAmount;
-
-    private string name;
+    private TextMeshProUGUI _bombAmount;
+    private TextMeshProUGUI _gunAmount;
+    private TextMeshProUGUI _medkitAmount;
+    private TextMeshProUGUI _keyAmount;
+    private TextMeshProUGUI _gobletAmount;
 
     public Equipment(string name) {
-        this.name = name;
+        _bombs = new List<Item>();
+        _guns = new List<Item>();
+        _medKits = new List<Item>();
+        _keys = new List<Item>();
+        _goblets = new List<Item>();
         
-        bombs = new List<Item>();
-        guns = new List<Item>();
-        medKits = new List<Item>();
-        keys = new List<Item>();
-        goblets = new List<Item>();
-        
-        bombAmount = GameObject.Find("bombAmount").GetComponent<TextMeshProUGUI>();
-        gunAmount = GameObject.Find("gunAmount").GetComponent<TextMeshProUGUI>();
-        medkitAmount = GameObject.Find("medkitAmount").GetComponent<TextMeshProUGUI>();
-        keyAmount = GameObject.Find("keyAmount").GetComponent<TextMeshProUGUI>();
-        gobletAmount = GameObject.Find(name + "GobletAmount").GetComponent<TextMeshProUGUI>();
+        _bombAmount = GameObject.Find("bombAmount").GetComponent<TextMeshProUGUI>();
+        _gunAmount = GameObject.Find("gunAmount").GetComponent<TextMeshProUGUI>();
+        _medkitAmount = GameObject.Find("medkitAmount").GetComponent<TextMeshProUGUI>();
+        _keyAmount = GameObject.Find("keyAmount").GetComponent<TextMeshProUGUI>();
+        _gobletAmount = GameObject.Find(name + "GobletAmount").GetComponent<TextMeshProUGUI>();
     }
 
     public void AddBomb() {
-        bombs.Add(new Item { itemType = Item.ItemType.Bomb });
-        bombAmount.SetText(bombs.Count.ToString());
+        _bombs.Add(new Item { itemType = Item.ItemType.Bomb });
+        _bombAmount.SetText(_bombs.Count.ToString());
     }
     
     public void AddGun() {
-        guns.Add(new Item { itemType = Item.ItemType.Gun });
-        gunAmount.SetText(guns.Count.ToString());
+        _guns.Add(new Item { itemType = Item.ItemType.Gun });
+        _gunAmount.SetText(_guns.Count.ToString());
     }
     
     public void AddMedKit() {
-        medKits.Add(new Item { itemType = Item.ItemType.MedKit });
-        medkitAmount.SetText(medKits.Count.ToString());
+        _medKits.Add(new Item { itemType = Item.ItemType.MedKit });
+        _medkitAmount.SetText(_medKits.Count.ToString());
     }
     
     public void AddKey(int amount) {
         for (int i = 0; i < amount; i++) {
-            keys.Add(new Item { itemType = Item.ItemType.Key });
+            _keys.Add(new Item { itemType = Item.ItemType.Key });
         }
-        keyAmount.SetText(keys.Count.ToString());
+        _keyAmount.SetText(_keys.Count.ToString());
     }
     
     public void AddGoblet() {
-        goblets.Add(new Item { itemType = Item.ItemType.Goblet });
-        gobletAmount.SetText(goblets.Count.ToString());
+        _goblets.Add(new Item { itemType = Item.ItemType.Goblet });
+        _gobletAmount.SetText(_goblets.Count.ToString());
     }
 
     public void DeleteBomb() {
-        bombs.RemoveAt(getBombsCount() - 1);
-        bombAmount.SetText(bombs.Count.ToString());
+        _bombs.RemoveAt(GETBombsCount() - 1);
+        _bombAmount.SetText(_bombs.Count.ToString());
     }
     
     public void DeleteGun() {
-        guns.RemoveAt(getGunsCount() - 1);
-        gunAmount.SetText(guns.Count.ToString());
+        _guns.RemoveAt(GETGunsCount() - 1);
+        _gunAmount.SetText(_guns.Count.ToString());
     }
     
     public void DeleteMedKit() {
-        medKits.RemoveAt(getMedKitsCount() - 1);
-        medkitAmount.SetText(medKits.Count.ToString());
+        _medKits.RemoveAt(GETMedKitsCount() - 1);
+        _medkitAmount.SetText(_medKits.Count.ToString());
     }
     
     public void DeleteGoblet() {
-        goblets.RemoveAt(getGobletsCount() - 1);
-        gobletAmount.SetText(goblets.Count.ToString());
+        _goblets.RemoveAt(GETGobletsCount() - 1);
+        _gobletAmount.SetText(_goblets.Count.ToString());
     }
     
     public void DeleteKey(int amount) {
         for (int i = 0; i < amount; i++) {
-            if (getKeysCount().Equals(0)) break;
-            keys.RemoveAt(getKeysCount() - 1);
+            if (GETKeysCount().Equals(0)) break;
+            _keys.RemoveAt(GETKeysCount() - 1);
         }
-        keyAmount.SetText(keys.Count.ToString());
+        _keyAmount.SetText(_keys.Count.ToString());
     }
 
-    public List<Item> getBombs() {
-        return bombs;
+    public List<Item> GETBombs() {
+        return _bombs;
     }
     
-    public List<Item> getGuns() {
-        return guns;
+    public List<Item> GETGuns() {
+        return _guns;
     }
     
-    public List<Item> getMedKits() {
-        return medKits;
+    public List<Item> GETMedKits() {
+        return _medKits;
     }
     
-    public List<Item> getKeys() {
-        return keys;
+    public List<Item> GETKeys() {
+        return _keys;
     }
     
-    public List<Item> getGoblets() {
-        return goblets;
+    public List<Item> GETGoblets() {
+        return _goblets;
     }
 
-    public int getBombsCount() {
-        return bombs.Count;
+    public int GETBombsCount() {
+        return _bombs.Count;
     }
     
-    public int getGunsCount() {
-        return guns.Count;
+    public int GETGunsCount() {
+        return _guns.Count;
     }
     
-    public int getMedKitsCount() {
-        return medKits.Count;
+    public int GETMedKitsCount() {
+        return _medKits.Count;
     }
     
-    public int getKeysCount() {
-        return keys.Count;
+    public int GETKeysCount() {
+        return _keys.Count;
     }
     
-    public int getGobletsCount() {
-        return goblets.Count;
+    public int GETGobletsCount() {
+        return _goblets.Count;
     }
 
-    public void setBombAmount(int number) {
-        bombAmount.SetText(number.ToString());
+    public void SetBombAmount(int number) {
+        _bombAmount.SetText(number.ToString());
     }
     
-    public void setGunAmount(int number) {
-        gunAmount.SetText(number.ToString());
+    public void SetGunAmount(int number) {
+        _gunAmount.SetText(number.ToString());
     }
     
-    public void setMedKitAmount(int number) {
-        medkitAmount.SetText(number.ToString());
+    public void SetMedKitAmount(int number) {
+        _medkitAmount.SetText(number.ToString());
     }
     
-    public void setKeyAmount(int number) {
-        keyAmount.SetText(number.ToString());
+    public void SetKeyAmount(int number) {
+        _keyAmount.SetText(number.ToString());
     }
     
-    public void setGobletAmount(int number) {
-        gobletAmount.SetText(number.ToString());
+    public void SetGobletAmount(int number) {
+        _gobletAmount.SetText(number.ToString());
     }
 
-    public void refreshEquipment() {
-        bombAmount.SetText(bombs.Count.ToString());
-        gunAmount.SetText(guns.Count.ToString());
-        medkitAmount.SetText(medKits.Count.ToString());
-        keyAmount.SetText(keys.Count.ToString());
+    public void RefreshEquipment() {
+        _bombAmount.SetText(_bombs.Count.ToString());
+        _gunAmount.SetText(_guns.Count.ToString());
+        _medkitAmount.SetText(_medKits.Count.ToString());
+        _keyAmount.SetText(_keys.Count.ToString());
     }
 }

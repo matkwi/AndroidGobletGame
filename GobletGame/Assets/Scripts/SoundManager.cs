@@ -5,31 +5,31 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-    private Sounds sounds;
-    private GameObject soundGameObject;
+    private Sounds _sounds;
+    private GameObject _soundGameObject;
 
     private void Start() {
-        sounds = GameObject.Find("Sounds").GetComponent<Sounds>();
-        soundGameObject = new GameObject("Sound");
+        _sounds = GameObject.Find("Sounds").GetComponent<Sounds>();
+        _soundGameObject = new GameObject("Sound");
     }
 
     public void PlayBombSound() {
-        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.PlayOneShot(sounds.bombSound);
+        AudioSource audioSource = _soundGameObject.AddComponent<AudioSource>();
+        audioSource.PlayOneShot(_sounds.bombSound);
     }
     
     public void PlayGunSound() {
-        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.PlayOneShot(sounds.gunSound);
+        AudioSource audioSource = _soundGameObject.AddComponent<AudioSource>();
+        audioSource.PlayOneShot(_sounds.gunSound);
     }
     
     public void PlayMedKitSound() {
-        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.PlayOneShot(sounds.medKitSound);
+        AudioSource audioSource = _soundGameObject.AddComponent<AudioSource>();
+        audioSource.PlayOneShot(_sounds.medKitSound);
     }
     
     public void PlayCollectSound() {
-        AudioSource audioSource = soundGameObject.AddComponent<AudioSource>();
-        audioSource.PlayOneShot(sounds.collectSound);
+        AudioSource audioSource = _soundGameObject.AddComponent<AudioSource>();
+        audioSource.PlayOneShot(_sounds.collectSound);
     }
 }

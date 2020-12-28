@@ -23,6 +23,7 @@
           <e p="InGameButtons.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
+          <e p="MusicClass.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="PreSettings.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />

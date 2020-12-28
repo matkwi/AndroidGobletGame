@@ -8,12 +8,12 @@ public class InGameButtons : MonoBehaviour {
 
     [SerializeField] private GameObject pauseMenu;
 
-    private Toggle toggleSound;
+    private Toggle _toggleSound;
 
     public void PauseButton() {
         pauseMenu.SetActive(true);
-        toggleSound = GameObject.Find("ToggleSound").GetComponent<Toggle>();
-        toggleSound.isOn = AudioListener.volume.Equals(1f);
+        _toggleSound = GameObject.Find("ToggleSound").GetComponent<Toggle>();
+        _toggleSound.isOn = AudioListener.volume.Equals(1f);
         Time.timeScale = 0f;
     }
 

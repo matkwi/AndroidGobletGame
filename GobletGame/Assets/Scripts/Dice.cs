@@ -2,53 +2,54 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class Dice : MonoBehaviour {
 
-    private Sprite[] diceSides;
-    private SpriteRenderer rend;
-    public static int whosTurn;
-    private bool coroutineAllowed = true;
-    public static bool playerIsMoving;
-    public bool AIPlayerDiceRoll;
+    private Sprite[] _diceSides;
+    private SpriteRenderer _rend;
+    public static int WhosTurn;
+    private bool _coroutineAllowed = true;
+    public static bool PlayerIsMoving;
+    [FormerlySerializedAs("AIPlayerDiceRoll")] public bool aiPlayerDiceRoll;
     
-    private Images images;
+    private Images _images;
 
     // Use this for initialization
 	private void Start () {
-        playerIsMoving = false;
-        images = GameObject.Find("Images").GetComponent<Images>();
+        PlayerIsMoving = false;
+        _images = GameObject.Find("Images").GetComponent<Images>();
         SetWhosTurnImage();
-        AIPlayerDiceRoll = false;
-        rend = GetComponent<SpriteRenderer>();
-        diceSides = Resources.LoadAll<Sprite>("DiceSides/");
-        rend.sprite = diceSides[9];
+        aiPlayerDiceRoll = false;
+        _rend = GetComponent<SpriteRenderer>();
+        _diceSides = Resources.LoadAll<Sprite>("DiceSides/");
+        _rend.sprite = _diceSides[9];
 	}
 
     private void Update() {
-        if (!playerIsMoving) {
-            if (!GameControl.GameOver && coroutineAllowed) {
-                if (AIPlayerDiceRoll) {
+        if (!PlayerIsMoving) {
+            if (!GameControl.GameOver && _coroutineAllowed) {
+                if (aiPlayerDiceRoll) {
                     SetEquipmentImages();
                     StartCoroutine("RollTheDice");
-                    AIPlayerDiceRoll = false;
+                    aiPlayerDiceRoll = false;
                 }
             }
         }
     }
 
     private void SetWhosTurnImage() {
-        if (whosTurn == 1) images.SetWhosTurnImage("Bat");
-        else if (whosTurn == 2) images.SetWhosTurnImage("Bunny");
-        else if (whosTurn == 3) images.SetWhosTurnImage("Duck");
-        else if (whosTurn == 4) images.SetWhosTurnImage("Chicken");
+        if (WhosTurn == 1) _images.SetWhosTurnImage("Bat");
+        else if (WhosTurn == 2) _images.SetWhosTurnImage("Bunny");
+        else if (WhosTurn == 3) _images.SetWhosTurnImage("Duck");
+        else if (WhosTurn == 4) _images.SetWhosTurnImage("Chicken");
     }
 
     private void OnMouseDown()
     {
-        if (!playerIsMoving) {
-            if (!GameControl.GameOver && coroutineAllowed) {
+        if (!PlayerIsMoving) {
+            if (!GameControl.GameOver && _coroutineAllowed) {
                 SetEquipmentImages();
                 StartCoroutine("RollTheDice");
             }
@@ -56,54 +57,54 @@ public class Dice : MonoBehaviour {
     }
 
     private void SetEquipmentImages() {
-        images.SetBombSelected(false);
-        images.SetGunSelected(false);
-        images.SetMedKitSelected(false);
+        _images.SetBombSelected(false);
+        _images.SetGunSelected(false);
+        _images.SetMedKitSelected(false);
     }
 
     private IEnumerator RollTheDice()
     {
-        coroutineAllowed = false;
+        _coroutineAllowed = false;
         int randomDiceSide = 0;
         for (int i = 0; i <= 20; i++) {
             randomDiceSide = Random.Range(1, 10);
-            rend.sprite = diceSides[randomDiceSide];
+            _rend.sprite = _diceSides[randomDiceSide];
             yield return new WaitForSeconds(0.05f);
         }
 
-        playerIsMoving = true;
+        PlayerIsMoving = true;
 
-        GameControl.diceSideThrown = randomDiceSide;
-
-        if (whosTurn == 1 && GameControl.isBatPlaying) {
+        GameControl.DiceSideThrown = randomDiceSide;
+        
+        if (WhosTurn == 1 && GameControl.IsBatPlaying) {
             GameControl.MovePlayer(1);
         }
 
-        if (whosTurn == 2 && GameControl.isBunnyPlaying) {
+        if (WhosTurn == 2 && GameControl.IsBunnyPlaying) {
             GameControl.MovePlayer(2);
         }
 
-        if (whosTurn == 3 && GameControl.isDuckPlaying) {
+        if (WhosTurn == 3 && GameControl.IsDuckPlaying) {
             GameControl.MovePlayer(3);
         }
 
-        if (whosTurn == 4 && GameControl.isChickenPlaying) {
+        if (WhosTurn == 4 && GameControl.IsChickenPlaying) {
             GameControl.MovePlayer(4);
         }
 
-        whosTurn += 1;
-        if (whosTurn <= 4) {
-            while (!GameControl.whoIsPlaying[whosTurn]) {
-                whosTurn += 1;
-                if (whosTurn == 5 || whosTurn == 6) whosTurn = 1;
-                if (whosTurn > 4) break;
+        WhosTurn += 1;
+        if (WhosTurn <= 4) {
+            while (!GameControl.WhoIsPlaying[WhosTurn]) {
+                WhosTurn += 1;
+                if (WhosTurn == 5 || WhosTurn == 6) WhosTurn = 1;
+                if (WhosTurn > 4) break;
             }
         }
-        if (whosTurn == 5 || whosTurn == 6) whosTurn = 1;
-        coroutineAllowed = true;
+        if (WhosTurn == 5 || WhosTurn == 6) WhosTurn = 1;
+        _coroutineAllowed = true;
     }
     
-    public int getWhosTurn() {
-        return whosTurn;
+    public int GETWhosTurn() {
+        return WhosTurn;
     }
 }

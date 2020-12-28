@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraMovementScript : MonoBehaviour {
-    private Vector3 touchStart;
+    private Vector3 _touchStart;
     public Camera cam;
     public float groundZ = 0;
     
@@ -17,11 +17,11 @@ public class CameraMovementScript : MonoBehaviour {
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) {
-            touchStart = GetWorldPosition(groundZ);
+            _touchStart = GetWorldPosition(groundZ);
         }
 
         if (Input.GetMouseButton(0)) {
-            Vector3 direction = touchStart - GetWorldPosition(groundZ);
+            Vector3 direction = _touchStart - GetWorldPosition(groundZ);
             if (!(Camera.main is null)) Camera.main.transform.position += direction;
         }
     }

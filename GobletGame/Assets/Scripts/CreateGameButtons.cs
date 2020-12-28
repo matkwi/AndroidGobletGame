@@ -8,66 +8,66 @@ using UnityEngine.UI;
 
 public class CreateGameButtons : MonoBehaviour {
     
-    private Toggle toggleHumanBat;
-    private Toggle toggleAIBat;
-    private Toggle toggleHumanBunny;
-    private Toggle toggleAIBunny;
-    private Toggle toggleHumanDuck;
-    private Toggle toggleAIDuck;
-    private Toggle toggleHumanChicken;
-    private Toggle toggleAIChicken;
+    private Toggle _toggleHumanBat;
+    private Toggle _toggleAIBat;
+    private Toggle _toggleHumanBunny;
+    private Toggle _toggleAIBunny;
+    private Toggle _toggleHumanDuck;
+    private Toggle _toggleAIDuck;
+    private Toggle _toggleHumanChicken;
+    private Toggle _toggleAIChicken;
 
-    private int count;
+    private int _count;
 
-    private TextMeshProUGUI warning;
+    private TextMeshProUGUI _warning;
     private void Start() {
-        toggleHumanBat = GameObject.Find("ToggleHuman").GetComponent<Toggle>();
-        toggleAIBat = GameObject.Find("ToggleAI").GetComponent<Toggle>();
-        toggleHumanBunny = GameObject.Find("ToggleHuman2").GetComponent<Toggle>();
-        toggleAIBunny = GameObject.Find("ToggleAI2").GetComponent<Toggle>();
-        toggleHumanDuck = GameObject.Find("ToggleHuman3").GetComponent<Toggle>();
-        toggleAIDuck = GameObject.Find("ToggleAI3").GetComponent<Toggle>();
-        toggleHumanChicken = GameObject.Find("ToggleHuman4").GetComponent<Toggle>();
-        toggleAIChicken = GameObject.Find("ToggleAI4").GetComponent<Toggle>();
+        _toggleHumanBat = GameObject.Find("ToggleHuman").GetComponent<Toggle>();
+        _toggleAIBat = GameObject.Find("ToggleAI").GetComponent<Toggle>();
+        _toggleHumanBunny = GameObject.Find("ToggleHuman2").GetComponent<Toggle>();
+        _toggleAIBunny = GameObject.Find("ToggleAI2").GetComponent<Toggle>();
+        _toggleHumanDuck = GameObject.Find("ToggleHuman3").GetComponent<Toggle>();
+        _toggleAIDuck = GameObject.Find("ToggleAI3").GetComponent<Toggle>();
+        _toggleHumanChicken = GameObject.Find("ToggleHuman4").GetComponent<Toggle>();
+        _toggleAIChicken = GameObject.Find("ToggleAI4").GetComponent<Toggle>();
 
-        count = 0;
-        warning = GameObject.Find("Warning").GetComponent<TextMeshProUGUI>();
+        _count = 0;
+        _warning = GameObject.Find("Warning").GetComponent<TextMeshProUGUI>();
     }
 
     public void Play() {
         PreSettings preSettings = new PreSettings();
 
-        if (toggleHumanBat.isOn || toggleAIBat.isOn) {
+        if (_toggleHumanBat.isOn || _toggleAIBat.isOn) {
             preSettings.IsBatPlaying = true;
-            count++;
+            _count++;
         }
         else preSettings.IsBatPlaying = false;
 
-        if (toggleHumanBunny.isOn || toggleAIBunny.isOn) {
+        if (_toggleHumanBunny.isOn || _toggleAIBunny.isOn) {
             preSettings.IsBunnyPlaying = true;
-            count++;
+            _count++;
         }
         else preSettings.IsBunnyPlaying = false;
 
-        if (toggleHumanDuck.isOn || toggleAIDuck.isOn) {
+        if (_toggleHumanDuck.isOn || _toggleAIDuck.isOn) {
             preSettings.IsDuckPlaying = true;
-            count++;
+            _count++;
         }
         else preSettings.IsDuckPlaying = false;
 
-        if (toggleHumanChicken.isOn || toggleAIChicken.isOn) {
+        if (_toggleHumanChicken.isOn || _toggleAIChicken.isOn) {
             preSettings.IsChickenPlaying = true;
-            count++;
+            _count++;
         }
         else preSettings.IsChickenPlaying = false;
 
-        preSettings.IsAIBat = toggleAIBat.isOn;
-        preSettings.IsAIBunny = toggleAIBunny.isOn;
-        preSettings.IsAIDuck = toggleAIDuck.isOn;
-        preSettings.IsAIChicken = toggleAIChicken.isOn;
+        preSettings.IsAIBat = _toggleAIBat.isOn;
+        preSettings.IsAIBunny = _toggleAIBunny.isOn;
+        preSettings.IsAIDuck = _toggleAIDuck.isOn;
+        preSettings.IsAIChicken = _toggleAIChicken.isOn;
         
-        if (count > 1) SceneManager.LoadScene("Scenes/SampleScene");
-        else warning.SetText("Pick at least 2 players");
+        if (_count > 1) SceneManager.LoadScene("Scenes/SampleScene");
+        else _warning.SetText("Pick at least 2 players");
     }
 
     public void Back() {
@@ -75,34 +75,34 @@ public class CreateGameButtons : MonoBehaviour {
     }
 
     public void ToggleBatHumanClicked() {
-        if (toggleAIBat.isOn) toggleAIBat.isOn = false;
+        if (_toggleAIBat.isOn) _toggleAIBat.isOn = false;
     }
     
     public void ToggleBunnyHumanClicked() {
-        if (toggleAIBunny.isOn) toggleAIBunny.isOn = false;
+        if (_toggleAIBunny.isOn) _toggleAIBunny.isOn = false;
     }
     
     public void ToggleDuckHumanClicked() {
-        if (toggleAIDuck.isOn) toggleAIDuck.isOn = false;
+        if (_toggleAIDuck.isOn) _toggleAIDuck.isOn = false;
     }
     
     public void ToggleChickenHumanClicked() {
-        if (toggleAIChicken.isOn) toggleAIChicken.isOn = false;
+        if (_toggleAIChicken.isOn) _toggleAIChicken.isOn = false;
     }
     
     public void ToggleBatAIClicked() {
-        if (toggleHumanBat.isOn) toggleHumanBat.isOn = false;
+        if (_toggleHumanBat.isOn) _toggleHumanBat.isOn = false;
     }
     
     public void ToggleBunnyAIClicked() {
-        if (toggleHumanBunny.isOn) toggleHumanBunny.isOn = false;
+        if (_toggleHumanBunny.isOn) _toggleHumanBunny.isOn = false;
     }
     
     public void ToggleDuckAIClicked() {
-        if (toggleHumanDuck.isOn) toggleHumanDuck.isOn = false;
+        if (_toggleHumanDuck.isOn) _toggleHumanDuck.isOn = false;
     }
     
     public void ToggleChickenAIClicked() {
-        if (toggleHumanChicken.isOn) toggleHumanChicken.isOn = false;
+        if (_toggleHumanChicken.isOn) _toggleHumanChicken.isOn = false;
     }
 }

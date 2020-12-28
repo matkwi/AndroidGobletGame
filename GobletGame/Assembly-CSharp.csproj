@@ -73,6 +73,7 @@
      <Compile Include="Assets\Scripts\InGameButtons.cs" />
      <Compile Include="Assets\Scripts\Item.cs" />
      <Compile Include="Assets\Scripts\MainMenu.cs" />
+     <Compile Include="Assets\Scripts\MusicClass.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PreSettings.cs" />
      <Compile Include="Assets\Scripts\SoundManager.cs" />

@@ -9,199 +9,199 @@ public class GameControl : MonoBehaviour {
     
     public static Player Bat, Bunny, Duck, Chicken;
 
-    private bool AIBat, AIBunny, AIDuck, AIChicken;
-    public static bool isBatPlaying, isBunnyPlaying, isDuckPlaying, isChickenPlaying;
+    private bool _aiBat, _aiBunny, _aiDuck, _aiChicken;
+    public static bool IsBatPlaying, IsBunnyPlaying, IsDuckPlaying, IsChickenPlaying;
     
-    public static List<bool> whoIsPlaying = new List<bool>();
+    public static List<bool> WhoIsPlaying = new List<bool>();
 
-    public static List<string> charactersPlaying = new List<string>();
+    public static List<string> CharactersPlaying = new List<string>();
     
-    public static int diceSideThrown = 10;
+    public static int DiceSideThrown = 10;
 
     public static bool GameOver;
     
-    private Images images;
+    private Images _images;
 
     // Use this for initialization
     void Start () {
 
         LoadPreSettings();
         
-        charactersPlaying.Clear();
+        CharactersPlaying.Clear();
 
         GameOver = false;
 
-        images = GameObject.Find("Images").GetComponent<Images>();
+        _images = GameObject.Find("Images").GetComponent<Images>();
 
-        if (isBatPlaying) {
+        if (IsBatPlaying) {
             Bat = GameObject.Find("Bat").GetComponent<Player>();
-            Bat.AIPlayer = AIBat;
-            charactersPlaying.Add("Bat");
+            Bat.aiPlayer = _aiBat;
+            CharactersPlaying.Add("Bat");
         }
         else Destroy(GameObject.Find("Bat"));
 
-        if (isBunnyPlaying) {
+        if (IsBunnyPlaying) {
             Bunny = GameObject.Find("Bunny").GetComponent<Player>();
-            Bunny.AIPlayer = AIBunny;
-            charactersPlaying.Add("Bunny");
+            Bunny.aiPlayer = _aiBunny;
+            CharactersPlaying.Add("Bunny");
         }
         else Destroy(GameObject.Find("Bunny"));
 
-        if (isDuckPlaying) {
+        if (IsDuckPlaying) {
             Duck = GameObject.Find("Duck").GetComponent<Player>();
-            Duck.AIPlayer = AIDuck;
-            charactersPlaying.Add("Duck");
+            Duck.aiPlayer = _aiDuck;
+            CharactersPlaying.Add("Duck");
         }
         else Destroy(GameObject.Find("Duck"));
 
-        if (isChickenPlaying) {
+        if (IsChickenPlaying) {
             Chicken = GameObject.Find("Chicken").GetComponent<Player>();
-            Chicken.AIPlayer = AIChicken;
-            charactersPlaying.Add("Chicken");
+            Chicken.aiPlayer = _aiChicken;
+            CharactersPlaying.Add("Chicken");
         }
         else Destroy(GameObject.Find("Chicken"));
 
-        if (isBatPlaying) {
+        if (IsBatPlaying) {
             Bat.moveAllowed = false;
             Bat.myTurn = 1;
         }
 
-        if (isBunnyPlaying) {
+        if (IsBunnyPlaying) {
             Bunny.moveAllowed = false;
             Bunny.myTurn = 2;
         }
 
-        if (isDuckPlaying) {
+        if (IsDuckPlaying) {
             Duck.moveAllowed = false;
             Duck.myTurn = 3;
         }
 
-        if (isChickenPlaying) {
+        if (IsChickenPlaying) {
             Chicken.moveAllowed = false;
             Chicken.myTurn = 4;
         }
 
-        if (isChickenPlaying) Dice.whosTurn = 4;
-        if (isDuckPlaying) Dice.whosTurn = 3;
-        if (isBunnyPlaying) Dice.whosTurn = 2;
-        if (isBatPlaying) Dice.whosTurn = 1;
+        if (IsChickenPlaying) Dice.WhosTurn = 4;
+        if (IsDuckPlaying) Dice.WhosTurn = 3;
+        if (IsBunnyPlaying) Dice.WhosTurn = 2;
+        if (IsBatPlaying) Dice.WhosTurn = 1;
     }
 
     private void LoadPreSettings() {
         
         PreSettings preSettings = new PreSettings();
 
-        isBatPlaying = preSettings.IsBatPlaying;
-        isBunnyPlaying = preSettings.IsBunnyPlaying;
-        isDuckPlaying = preSettings.IsDuckPlaying;
-        isChickenPlaying = preSettings.IsChickenPlaying;
+        IsBatPlaying = preSettings.IsBatPlaying;
+        IsBunnyPlaying = preSettings.IsBunnyPlaying;
+        IsDuckPlaying = preSettings.IsDuckPlaying;
+        IsChickenPlaying = preSettings.IsChickenPlaying;
         
-        AIBat = preSettings.IsAIBat;
-        AIBunny = preSettings.IsAIBunny;
-        AIDuck = preSettings.IsAIDuck;
-        AIChicken = preSettings.IsAIChicken;
+        _aiBat = preSettings.IsAIBat;
+        _aiBunny = preSettings.IsAIBunny;
+        _aiDuck = preSettings.IsAIDuck;
+        _aiChicken = preSettings.IsAIChicken;
         
-        whoIsPlaying.Clear();
-        whoIsPlaying.Add(false);
-        whoIsPlaying.Add(preSettings.IsBatPlaying);
-        whoIsPlaying.Add(preSettings.IsBunnyPlaying);
-        whoIsPlaying.Add(preSettings.IsDuckPlaying);
-        whoIsPlaying.Add(preSettings.IsChickenPlaying);
+        WhoIsPlaying.Clear();
+        WhoIsPlaying.Add(false);
+        WhoIsPlaying.Add(preSettings.IsBatPlaying);
+        WhoIsPlaying.Add(preSettings.IsBunnyPlaying);
+        WhoIsPlaying.Add(preSettings.IsDuckPlaying);
+        WhoIsPlaying.Add(preSettings.IsChickenPlaying);
     }
 
     // Update is called once per frame
     private void Update() {
 
-        if (isBatPlaying) {
-            if (Bat.iterator >= diceSideThrown) {
+        if (IsBatPlaying) {
+            if (Bat.iterator >= DiceSideThrown) {
                 if (Bat.transform.position == Bat.waypoints[Bat.waypointIndex].transform.position) {
                     Bat.iterator = 0;
                     Bat.moveAllowed = false;
-                    Dice.playerIsMoving = false;
-                    Bat.DiceRolled = false;
+                    Dice.PlayerIsMoving = false;
+                    Bat.diceRolled = false;
 
-                    if (isBunnyPlaying) {
-                        images.SetWhosTurnImage("Bunny");
+                    if (IsBunnyPlaying) {
+                        _images.SetWhosTurnImage("Bunny");
                         Bunny.refreshEq = true;
                     }
-                    else if (isDuckPlaying) {
-                        images.SetWhosTurnImage("Duck");
+                    else if (IsDuckPlaying) {
+                        _images.SetWhosTurnImage("Duck");
                         Duck.refreshEq = true;
                     }
-                    else if (isChickenPlaying) {
-                        images.SetWhosTurnImage("Chicken");
+                    else if (IsChickenPlaying) {
+                        _images.SetWhosTurnImage("Chicken");
                         Chicken.refreshEq = true;
                     }
                 }
             }
         }
         
-        if (isBunnyPlaying) {
-            if (Bunny.iterator >= diceSideThrown) {
+        if (IsBunnyPlaying) {
+            if (Bunny.iterator >= DiceSideThrown) {
                 if (Bunny.transform.position == Bunny.waypoints[Bunny.waypointIndex].transform.position) {
                     Bunny.iterator = 0;
                     Bunny.moveAllowed = false;
-                    Dice.playerIsMoving = false;
-                    Bunny.DiceRolled = false;
+                    Dice.PlayerIsMoving = false;
+                    Bunny.diceRolled = false;
 
-                    if (isDuckPlaying) {
-                        images.SetWhosTurnImage("Duck");
+                    if (IsDuckPlaying) {
+                        _images.SetWhosTurnImage("Duck");
                         Duck.refreshEq = true;
                     }
-                    else if (isChickenPlaying) {
-                        images.SetWhosTurnImage("Chicken");
+                    else if (IsChickenPlaying) {
+                        _images.SetWhosTurnImage("Chicken");
                         Chicken.refreshEq = true;
                     }
-                    else if (isBatPlaying) {
-                        images.SetWhosTurnImage("Bat");
+                    else if (IsBatPlaying) {
+                        _images.SetWhosTurnImage("Bat");
                         Bat.refreshEq = true;
                     }
                 }
             }
         }
         
-        if (isDuckPlaying) {
-            if (Duck.iterator >= diceSideThrown) {
+        if (IsDuckPlaying) {
+            if (Duck.iterator >= DiceSideThrown) {
                 if (Duck.transform.position == Duck.waypoints[Duck.waypointIndex].transform.position) {
                     Duck.iterator = 0;
                     Duck.moveAllowed = false;
-                    Dice.playerIsMoving = false;
-                    Duck.DiceRolled = false;
+                    Dice.PlayerIsMoving = false;
+                    Duck.diceRolled = false;
 
-                    if (isChickenPlaying) {
-                        images.SetWhosTurnImage("Chicken");
+                    if (IsChickenPlaying) {
+                        _images.SetWhosTurnImage("Chicken");
                         Chicken.refreshEq = true;
                     }
-                    else if (isBatPlaying) {
-                        images.SetWhosTurnImage("Bat");
+                    else if (IsBatPlaying) {
+                        _images.SetWhosTurnImage("Bat");
                         Bat.refreshEq = true;
                     }
-                    else if (isBunnyPlaying) {
-                        images.SetWhosTurnImage("Bunny");
+                    else if (IsBunnyPlaying) {
+                        _images.SetWhosTurnImage("Bunny");
                         Bunny.refreshEq = true;
                     }
                 }
             }
         }
         
-        if (isChickenPlaying) {
-            if (Chicken.iterator >= diceSideThrown) {
+        if (IsChickenPlaying) {
+            if (Chicken.iterator >= DiceSideThrown) {
                 if (Chicken.transform.position == Chicken.waypoints[Chicken.waypointIndex].transform.position) {
                     Chicken.iterator = 0;
                     Chicken.moveAllowed = false;
-                    Dice.playerIsMoving = false;
-                    Chicken.DiceRolled = false;
+                    Dice.PlayerIsMoving = false;
+                    Chicken.diceRolled = false;
 
-                    if (isBatPlaying) {
-                        images.SetWhosTurnImage("Bat");
+                    if (IsBatPlaying) {
+                        _images.SetWhosTurnImage("Bat");
                         Bat.refreshEq = true;
                     }
-                    else if (isBunnyPlaying) {
-                        images.SetWhosTurnImage("Bunny");
+                    else if (IsBunnyPlaying) {
+                        _images.SetWhosTurnImage("Bunny");
                         Bunny.refreshEq = true;
                     }
-                    else if (isDuckPlaying) {
-                        images.SetWhosTurnImage("Duck");
+                    else if (IsDuckPlaying) {
+                        _images.SetWhosTurnImage("Duck");
                         Duck.refreshEq = true;
                     }
                 }

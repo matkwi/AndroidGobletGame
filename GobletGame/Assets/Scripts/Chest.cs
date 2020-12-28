@@ -8,7 +8,7 @@ public class Chest : MonoBehaviour
     
     public Transform[] waypoints;
 
-    private int waypointIndex;
+    private int _waypointIndex;
 
     public bool changePosition;
     
@@ -16,10 +16,10 @@ public class Chest : MonoBehaviour
     void Start() {
         changePosition = false;
         Random random = new Random();
-        waypointIndex = random.Next(0, 11);
-        if (waypointIndex < 3) gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(3, 0);
+        _waypointIndex = random.Next(0, 11);
+        if (_waypointIndex < 3) gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(3, 0);
         else gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0, 3);
-        transform.position = waypoints[waypointIndex].transform.position;
+        transform.position = waypoints[_waypointIndex].transform.position;
     }
 
     // Update is called once per frame
@@ -31,10 +31,10 @@ public class Chest : MonoBehaviour
 
     private void ChangePosition() {
         Random random = new Random();
-        waypointIndex = random.Next(0, 11);
-        if (waypointIndex < 3) gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(3, 0);
+        _waypointIndex = random.Next(0, 11);
+        if (_waypointIndex < 3) gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(3, 0);
         else gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0, 3);
-        transform.position = waypoints[waypointIndex].transform.position;
+        transform.position = waypoints[_waypointIndex].transform.position;
         changePosition = false;
     }
 }
