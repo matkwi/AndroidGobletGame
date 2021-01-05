@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
 
-public class Chest : MonoBehaviour
-{
+public class Chest : MonoBehaviour {
     
     public Transform[] waypoints;
 
@@ -23,8 +22,7 @@ public class Chest : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         if (changePosition) 
             ChangePosition();
     }

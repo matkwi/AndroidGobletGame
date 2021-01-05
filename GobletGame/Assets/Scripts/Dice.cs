@@ -93,6 +93,7 @@ public class Dice : MonoBehaviour {
         }
 
         WhosTurn += 1;
+        if (WhosTurn == 5 || WhosTurn == 6) WhosTurn = 1;
         if (WhosTurn <= 4) {
             while (!GameControl.WhoIsPlaying[WhosTurn]) {
                 WhosTurn += 1;
@@ -100,11 +101,6 @@ public class Dice : MonoBehaviour {
                 if (WhosTurn > 4) break;
             }
         }
-        if (WhosTurn == 5 || WhosTurn == 6) WhosTurn = 1;
         _coroutineAllowed = true;
-    }
-    
-    public int GETWhosTurn() {
-        return WhosTurn;
     }
 }
