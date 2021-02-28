@@ -22,3 +22,5 @@ Before each turn you can use items from your equipment to shoot your opponents o
 To collect items you just need to be lucky and step on to the item by rolling the dice.
 
 <img width="522" alt="Zrzut ekranu 2021-01-26 o 18 15 34 (1)" src="https://user-images.githubusercontent.com/49214578/109423616-76efe300-79e0-11eb-9e10-5029ac6d4e6a.png">
+
+To play the game just download "GobletGame Android.zip" for Android devices or "GobletGame Windows.zip" for Windows devices.
